@@ -13,3 +13,8 @@ Voila, you should be able to develop!
 To activate virtual environment for backend
 
 $ source cacheon_backend/bin/activate
+
+
+Great Source for creating a development environment
+
+https://superuser.com/questions/1316300/how-to-sync-a-local-dir-to-server-using-git
