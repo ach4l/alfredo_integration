@@ -18,3 +18,9 @@ $ source cacheon_backend/bin/activate
 Great Source for creating a development environment
 
 https://superuser.com/questions/1316300/how-to-sync-a-local-dir-to-server-using-git
+
+Git commands :
+
+git remote add origin https://pi@192.168.137.168
+git remote set-url origin pi@192.168.137.168:~/cache_on_backend/sync_pi
+git push --set-upstream origin master
