@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 from pytube import YouTube 
 
 # Making the query
-query = 'hutta'
+query = 'Butta Gandu'
+query = query.replace(" ", "+")
 url = "http://m.youtube.com/results?search_query=" + query
 response = urllib.request.urlopen(url)
 html = response.read()
