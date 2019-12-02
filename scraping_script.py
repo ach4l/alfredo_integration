@@ -2,14 +2,20 @@ import urllib.request
 from bs4 import BeautifulSoup
 from pytube import YouTube
 import os
+import os.path
+from os import path
 
 # Making the query
 
 def youtube_scraper(query,userid):
-    my_dir = os.path.expanduser('~/'+userid)
 
-    #SAVE_PATH = '/' +str(userid)+ '/'
-    
+    # If the userid folder already exists, then dont need to create one
+
+    # All the files requested by a user will be stored in userid folder
+    if not path.exists(str(userid)):
+        os.mkdir(str(userid))
+
+        
     query = query.replace(" ", "+")
     print(query)
     url = "http://m.youtube.com/results?search_query=" + query
@@ -30,7 +36,7 @@ def youtube_scraper(query,userid):
             yt = YouTube(url)
             #yt.set_filename(vid.contents)
             stream = yt.streams.first()
-            stream.download('1/')
+            stream.download(str(userid)+ '/')
             
             print('https://m.youtube.com' + vid['href'])
             print('Saved as')
