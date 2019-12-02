@@ -11,9 +11,13 @@ def youtube_scraper(query,userid):
     #SAVE_PATH = '/' +str(userid)+ '/'
     
     query = query.replace(" ", "+")
+    print(query)
     url = "http://m.youtube.com/results?search_query=" + query
+    print(url)
     response = urllib.request.urlopen(url)
+    print('opened')
     html = response.read()
+    print('read')
 
     # Getting links and Saving the first
     soup = BeautifulSoup(html, 'html.parser')
