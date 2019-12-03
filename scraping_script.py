@@ -30,13 +30,17 @@ def youtube_scraper(query,userid):
     downloaded = 0
     for vid in soup.findAll(attrs={'class':'yt-uix-tile-link'}):
         url = 'https://m.youtube.com' + vid['href']
+        
+        video_name = vid['title']
+        video_name = video_name.rstrip()
+        
         if downloaded == 0:
             downloaded = 1  # Downloading only one for now
             
             yt = YouTube(url)
-            #yt.set_filename(vid.contents)
+            #yt.title(video_name)
             stream = yt.streams.first()
-            stream.download(str(userid)+ '/')
+            stream.download(str(userid)+ '/', filename=video_name)
             
             print('https://m.youtube.com' + vid['href'])
             print('Saved as')
