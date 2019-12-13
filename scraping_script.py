@@ -7,7 +7,8 @@ from os import path
 
 # Making the query
 
-def youtube_scraper(query,userid):
+def youtube_scraper(query,userid, aud_or_vid):
+    #aud_or_vid = 1
 
     # If the userid folder already exists, then dont need to create one
 
@@ -23,7 +24,7 @@ def youtube_scraper(query,userid):
     response = urllib.request.urlopen(url)
     print('opened')
     html = response.read()
-    print('read')
+    print('read and got the video link to download')
 
     # Getting links and Saving the first
     soup = BeautifulSoup(html, 'html.parser')
@@ -39,7 +40,13 @@ def youtube_scraper(query,userid):
             
             yt = YouTube(url)
             #yt.title(video_name)
-            stream = yt.streams.first()
+            # If user wants Only AUDIO
+            if aud_or_vid == 0:
+                print("Getting Audio")
+                stream = yt.streams.filter(only_audio=True).first()
+            else:
+                print("Getting Video 144p")
+                stream = yt.streams.filter(resolution = "144p").first()
             stream.download(str(userid)+ '/', filename=video_name)
             
             print('https://m.youtube.com' + vid['href'])
@@ -56,6 +63,11 @@ with open('todo.csv', 'r') as f:
     reader = csv.reader(f)
     todo_list = list(reader)
     for item in todo_list:
-        if item[2] == 'youtube':
-            youtube_scraper(item[3],item[0])
+        if item[2] == 'youtube_audio':
+            youtube_scraper(item[3],item[0],0)
+        if item[2] == 'youtube_video':
+            youtube_scraper(item[3],item[0],1)
+
+# TO DO - Remove the line from todo.csv after having scraped
+
 

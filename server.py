@@ -15,15 +15,36 @@ def hello():
 @app.route('/transform', methods=["GET","POST"])
 def transform_view():
     userid = request.form["userid"]
+    #audio_switch = request.form["audio-switch"]
+    
+    
+    
 
     
 
     with open('todo.csv', 'a', newline='') as fw:
-        writer = csv.writer(fw, delimiter=',')  
+        writer = csv.writer(fw, delimiter=',') 
+
+        #  Currently maximum 4 requests per person. 
         for i in range(4):
             requestnumber = "request"+str(i)
+            audio_switch_number = "audio-switch" + str(i)
+            #print(request.form[audio_switch_number])
+            
             if request.form[requestnumber]:
-                line = [userid, userid + '_1', 'youtube' ,  request.form[requestnumber]]
+                print("here")
+                if request.form[audio_switch_number]:
+                    print("here2")
+                    audio_switch = request.form[audio_switch_number]
+                    print("here3")
+                    if audio_switch == "audio":
+                        print("here4")
+                        mode = "_audio"
+                else:
+                    mode = "_video"
+                    print("here5")
+                print(mode)
+                line = [userid, userid + '_1', 'youtube' + mode ,  request.form[requestnumber]]
                 writer.writerow(line)   
         
         # for item in todo_list:
