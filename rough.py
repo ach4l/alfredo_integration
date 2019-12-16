@@ -24,7 +24,7 @@ def get_wikitravel_link(query):
             #if got_it ==0:
             link = child['href']
             break
-    print('http://www.wikitravel.com/en'+link)
+    print('http://www.wikitravel.com'+link)
     return link
 
-get_wikitravel_link('bilaspur')
+link = get_wikitravel_link('bilaspur')
