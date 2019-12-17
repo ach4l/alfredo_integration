@@ -5,6 +5,12 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 import re
 from zipfile import ZipFile
+from pytube import YouTube
+from os import path
+import shutil # To remove temp_directory
+import json
+import requests
+from googlesearch import search
 
 ######### General utility functions ###########
 
@@ -14,7 +20,7 @@ def zip_a_directory(filename,directory_read,directory_write):
 
     Tested and works - zip_a_directory('1_1.zip','output5', 'output' )
     '''
-    print('Function running : get_wikitravel_link')
+    print('Function running : zip a directory')
     print('Directory being zipped: ' + directory_read)
     with ZipFile(directory_write + '/' + filename, 'w') as zipObj:
         # Iterate over all the files in directory
@@ -29,7 +35,7 @@ def zip_a_directory(filename,directory_read,directory_write):
 
 
 
-###########################   WIKITRAVEL   ############################
+###########################   Wikitravel Scraper   ############################
 
 def get_wikitravel_link(query):    
     
@@ -67,18 +73,20 @@ def get_links_from_wikitravel_page(url):
     html = urlopen(req).read()    
     soup = BeautifulSoup(html, 'html.parser')
     links = []
+    # Getting only the links found in the Body, and some dirty regex hack
     for body in soup.findAll(attrs={'class':'mw-body-content', 'id':'bodyContent'}):
         for link in body.find_all("a",{'class':''}, href=re.compile("^/en/((?!File:|Wikitravel:|Category:|Special:).)*$")):
             links.append(link['href'])
-    #print(len(links))
-    links = list(dict.fromkeys(links))
-    #print(links)
+    
+    links = list(dict.fromkeys(links))    
     print('Found ' + str(len(links)) + ' links to follow')
     return links
 
 def wikitravel_scraper(query, request_id, level):
     '''
     takes as input a query and saves it in the response folder with title as request id
+
+    tested and works - wikitravel_scraper('Hampi', '1_1', 0)
 
     TO DO - change the main page html to redirect to the lower level htmls
     '''
@@ -92,19 +100,118 @@ def wikitravel_scraper(query, request_id, level):
         for link in links:
             city = link.split('/')[-1]
             print(city)
-            command = 'wget.exe -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -w 0.1 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output https://www.wikitravel.org' + link
+            command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -w 0.1 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output https://www.wikitravel.org' + link
             os.system(command)
     zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
-    shutil.rmtree('temp_outptut', ignore_errors=False, onerror=None)
+    shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
     print('done and saved at results/' + str(request_id) + '.zip')
     return
 
 ############################# Youtube Scraper ##############################
 
+def youtube_scraper(query,request_id, aud_or_vid):
+    '''
+    takes as input a query and saves it in the response folder with title as request id
+    '''        
+    query = query.replace(" ", "+")
+    print(query)
+    url = "http://m.youtube.com/results?search_query=" + query
+    print(url)
+    response = urllib.request.urlopen(url)
+    print('opened')
+    html = response.read()
+    print('read and got the video link to download')
+
+    # Getting links and Saving the first
+    soup = BeautifulSoup(html, 'html.parser')
+    downloaded = 0
+    for vid in soup.findAll(attrs={'class':'yt-uix-tile-link'}):
+        url = 'https://m.youtube.com' + vid['href']
+        
+        video_name = vid['title']
+        video_name = video_name.rstrip()
+        
+        if downloaded == 0:
+            downloaded = 1  # Downloading only one for now
+            
+            yt = YouTube(url)
+            #yt.title(video_name)
+            # If user wants Only AUDIO
+            if aud_or_vid == 0:
+                print("Getting Audio")
+                stream = yt.streams.filter(only_audio=True).first()
+            else:
+                print("Getting the lowest pososible video resolution")
+                stream = yt.streams.order_by('resolution').desc().last()
+                
+            stream.download('results/', filename=request_id)
+            
+            print('https://m.youtube.com' + vid['href'])
+            print('Saved as')
+    print('Done')
+
+    return
 
 
 #############################  Google Scraper  ##############################
 
+def google_top_10 (query):    
+    # Takes a query and returns a list of links
+    
+    links = []
+    for j in search(query, tld="co.in",stop=10):
+        links.append(j)
+        print(j)   
+    
+    return links
+
+def google_scraper(query,request_id):
+    '''
+    takes as input a query and saves it in the results folder with title as request_id.txt
+
+    Tested and works : google_scrapper('Timeless tales', '2_9')
+
+    '''
+    links = google_top_10(query)
+    link = links[0]    
+    command = 'wget.exe -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output ' + link
+    os.system(command)
+    zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
+    shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
+    print('done and saved at results/' + str(request_id) + '.zip')
+    return
+
+
+    
+
 
 ############################# Weather Scraper  ##############################
+
+def weather_scraper(userlat_long, request_id):
+    '''
+    takes user lat_long and saves the json in a txt file in results
+    using: https://openweathermap.org/forecast5
+
+    Tested and works :  weather_scraper('32.2475_76.3257', '4_3')
+    '''
+    api_key = '02d96f2375c5268afa56c3b6ae8b2593'
+    # base_url variable to store url 
+    base_url = 'http://api.openweathermap.org/data/2.5/forecast?'
+
+    # parsing user latitude and longitude and putting it in right API format
+    lat_lon = '&lat=' + userlat_long.split('_')[0] + '&lon=' + userlat_long.split('_')[1]
+    
+    # complete url address 
+    complete_url = base_url + "appid=" + api_key + lat_lon    
+    response = requests.get(complete_url) 
+    
+    # json dumping into text file
+    x = response.json() 
+    with open('results/' + str(request_id) + '.txt', 'w') as outfile:
+        json.dump(x, outfile)
+    return
+
+
+
+
 
