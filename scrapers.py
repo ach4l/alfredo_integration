@@ -49,7 +49,7 @@ def get_wikitravel_link(query):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1)' }  # I'm a fucking pirate
     url = 'https://wikitravel.org/wiki/en/index.php?search=' + query + '&title=Special%3ASearch&profile=default&fulltext=1'
     req = Request(url=url, headers=headers)    
-      
+    html = urlopen(req).read()   
 
     # Getting only the top result after parsing the response
     soup = BeautifulSoup(html, 'html.parser')
@@ -91,7 +91,7 @@ def wikitravel_scraper(query, request_id, level):
     TO DO - change the main page html to redirect to the lower level htmls
     '''
     url = get_wikitravel_link(query)        
-    command = 'wget.exe -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output https://www.wikitravel.org' + url
+    command = 'wget.exe -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -w 0.1 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output https://www.wikitravel.org' + url
     os.system(command)
     if level == 1:
         print('wget done, now looking at level 2')
@@ -100,7 +100,7 @@ def wikitravel_scraper(query, request_id, level):
         for link in links:
             city = link.split('/')[-1]
             print(city)
-            command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output https://www.wikitravel.org' + link
+            command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -w 0.1 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output https://www.wikitravel.org' + link
             os.system(command)
     zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
     shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
@@ -126,18 +126,17 @@ def youtube_scraper(query,request_id, aud_or_vid):
     soup = BeautifulSoup(html, 'html.parser')
     downloaded = 0
     for vid in soup.findAll(attrs={'class':'yt-uix-tile-link'}):
-        url = 'https://www.youtube.com' + vid['href']
+        url = 'https://m.youtube.com' + vid['href']
         
         video_name = vid['title']
         video_name = video_name.rstrip()
         
         if downloaded == 0:
             downloaded = 1  # Downloading only one for now
-            print(url)
+            
             yt = YouTube(url)
             #yt.title(video_name)
             # If user wants Only AUDIO
-            #yt.streams.all()
             if aud_or_vid == 0:
                 print("Getting Audio")
                 stream = yt.streams.filter(only_audio=True).first()
@@ -175,9 +174,9 @@ def google_scraper(query,request_id):
     '''
     links = google_top_10(query)
     link = links[0]    
-    command = 'wget.exe -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links -A "*.html,*.css,*.HTML.*.CSS,*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG, *.SVG, *.svg" --no-directories --directory-prefix=temp_output ' + link
+    command = 'wget.exe -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=temp_output ' + link
     os.system(command)
-    zip_a_directory(str(request_id)+'.zip','temp_output/', 'results')
+    zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
     shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
     print('done and saved at results/' + str(request_id) + '.zip')
     return
