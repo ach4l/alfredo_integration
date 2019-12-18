@@ -79,7 +79,7 @@ with open('todo_wikitravel.csv', 'r') as f:
         for link in links:
             city = link.split('/')[-1]
             print(city)
-            command = 'wget.exe -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -w 0.1 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=output5 https://www.wikitravel.org' + link
+            command = 'wget.exe -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG, *.SVG, *.svg" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=output5 https://www.wikitravel.org' + link
             os.system(command)
 
         print('done and saved')

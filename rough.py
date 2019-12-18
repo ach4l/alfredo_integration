@@ -27,4 +27,30 @@ def get_wikitravel_link(query):
     print('http://www.wikitravel.com'+link)
     return link
 
-link = get_wikitravel_link('bilaspur')
+from urllib.request import Request, urlopen
+url =  'https://railways.makemytrip.com/listing?date=20191220&srcStn=NDLS&srcCity=Delhi&destStn=ASR&destCity=Amritsar&classCode='
+#response = urllib.request.urlopen(url)
+#html = response.read()
+
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1)' }  # I'm a fucking pirate
+req = Request(url=url, headers=headers)
+html = urlopen(req).read() 
+
+# from requests_html import HTMLSession
+
+# session = HTMLSession()
+# r = session.get(url=url, headers = headers)
+# print(r.html.render())
+
+from urllib.request import Request, urlopen
+import pandas as pd
+url =  'https://railways.makemytrip.com/listing?date=20191220&srcStn=NDLS&srcCity=Delhi&destStn=ASR&destCity=Amritsar&classCode='
+#response = urllib.request.urlopen(url)
+#html = response.read()
+url = 'https://www.cleartrip.com/trains/results?from_station=NDLS&to_station=ASR&class=3A&date=21-1-2020&adults=1&children=0&male_seniors=0&female_seniors=0'
+
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1)' }  # I'm a fucking pirate
+req = Request(url=url, headers=headers)
+html = urlopen(req).read() 
+
+tables = pd.read_html(html)
