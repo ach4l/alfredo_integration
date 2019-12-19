@@ -1,0 +1,18 @@
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hamburger-Nav---XS" transform="translate(-245.000000, -79.000000)" fill="#84CE7B">
+            <g id="Group-2">
+                <g transform="translate(-1.000000, 0.000000)">
+                    <g id="Menu-Container" transform="translate(1.000000, 50.000000)">
+                        <g id="Menu" transform="translate(20.000000, 23.000000)">
+                            <circle id="Active" cx="230" cy="11" r="5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

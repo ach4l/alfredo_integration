@@ -1,0 +1,21 @@
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TD-Style-Guide-Large" transform="translate(-1825.000000, -119.000000)" fill="#444444">
+            <g id="Grid" transform="translate(139.000000, 119.000000)">
+                <g id="icon" transform="translate(1686.000000, 0.000000)">
+                    <g id="Group-3">
+                        <path d="M2,0 C3.105,0 4,0.895 4,2 C4,3.105 3.105,4 2,4 C0.895,4 0,3.105 0,2 C0,0.895 0.895,0 2,0" id="Fill-136"></path>
+                        <polygon id="Fill-137" points="6 3 16 3 16 1 6 1"></polygon>
+                        <path d="M2,6 C3.105,6 4,6.895 4,8 C4,9.105 3.105,10 2,10 C0.895,10 0,9.105 0,8 C0,6.895 0.895,6 2,6" id="Fill-138"></path>
+                        <polygon id="Fill-139" points="6 9 16 9 16 7 6 7"></polygon>
+                        <path d="M2,12 C3.105,12 4,12.895 4,14 C4,15.105 3.105,16 2,16 C0.895,16 0,15.105 0,14 C0,12.895 0.895,12 2,12" id="Fill-140"></path>
+                        <polygon id="Fill-141" points="6 15 16 15 16 13 6 13"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
