@@ -2,10 +2,13 @@ from flask import Flask, make_response, request, render_template, send_file, abo
 import io
 import csv
 import os
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__, static_url_path='')
+CORS(app, support_credentials=True)
 
 @app.route('/<reqid>/<path>', methods=["GET","POST"])
+@cross_origin(supports_credentials=True)
 def root(path, reqid):
     print('sending ' + path) 
     return app.send_static_file(reqid + '/' + path)
@@ -34,6 +37,7 @@ def hello():
 
 # Getting a Post Request from the user to store queries in todo list
 @app.route('/request', methods=["GET","POST"]) #GET requests will be blocked
+@cross_origin(supports_credentials=True)
 def read_request():
     req_data = request.get_json()
     user_id = str(req_data['user_id']) 
@@ -66,6 +70,7 @@ def read_request():
 
 
 @app.route('/response', methods=["GET","POST"])
+@cross_origin(supports_credentials=True)
 def transform_view():
     req_data=request.get_json()
     user_id = str(req_data['user_id'])

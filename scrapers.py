@@ -11,6 +11,8 @@ import shutil # To remove temp_directory
 import json
 import requests
 from googlesearch import search
+import codecs
+
 
 ######### General utility functions ###########
 
@@ -102,11 +104,20 @@ def wikitravel_scraper(query, request_id, level):
             city = link.split('/')[-1]
             print(city)
             command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + link
-            os.system(command)
+            os.system(command)        
     #zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
     #shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
     print('done and saved at results/' + str(request_id) + '.zip')
     return
+
+def transform_html(filename,links):
+    f=codecs.open(filename, 'r', encoding="utf8")
+    content = f.read()
+    
+    content = content.replace("www.google-analytics.com", "CHECK THIS SHIT")
+    print(content)
+    
+transform_html('output5/hampi.html',[])
 
 ############################# Youtube Scraper ##############################
 
@@ -176,7 +187,7 @@ def google_scraper(query,request_id):
     '''
     links = google_top_10(query)
     link = links[0]    
-    command = 'wget.exe -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links -A "*.html,*.css,*.HTML.*.CSS,*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG, *.SVG, *.svg" --no-directories --directory-prefix=static/' + request_id ' '+ link
+    command = 'wget.exe -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links -A "*.html,*.css,*.HTML.*.CSS,*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG, *.SVG, *.svg" --no-directories --directory-prefix=static/' + request_id + ' '+ link
     os.system(command)
     #zip_a_directory(str(request_id)+'.zip','temp_output/', 'results')
     #shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
