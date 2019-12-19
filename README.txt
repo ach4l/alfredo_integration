@@ -24,3 +24,27 @@ Git commands :
 git remote add origin https://pi@192.168.137.168
 git remote set-url origin pi@192.168.137.168:~/cache_on_backend/sync_pi
 git push --set-upstream origin master
+
+
+For ALFREDO : (how to send requests to backend API)
+
+# Task 1 - Add a new request to the backend
+
+Sample data: 
+data = {'user_id': '1', 'req_id':"1", 'type':'wikitravel', 'mode': '0', 'query': 'Pushkar'}
+
+Post JSON to the following URL
+url = <ip.address>:<port>/request
+
+# Task 2 - Get the links to download all the files
+
+Sample data remains the same. Only url changes.
+
+Post JSON to the following URL
+url = <ip.address>:<port>/response
+
+Returns a json object (jsonify(files)) 
+
+# Task 3 - Links to download the files
+
+Just iterate through all the links gotten from Task 2.
