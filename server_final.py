@@ -36,15 +36,39 @@ def hello():
 #     return userid
 
 # Getting a Post Request from the user to store queries in todo list
-@app.route('/request', methods=["GET","POST"]) #GET requests will be blocked
+@app.route('/add_request', methods=["GET","POST"]) #GET requests will be blocked
 @cross_origin(supports_credentials=True)
 def read_request():
     req_data = request.get_json()
-    user_id = str(req_data['user_id']) 
+    user_id = str(req_data['user_id'])
+    query = str(req_data['query'])
+    
+    with open('id_counter.csv', mode='r') as infile:
+        # id_counter format - user_id : id_counter
+        reader = csv.reader(infile)        
+        id_counter_dict = {rows[0]:rows[1] for rows in reader}
+    print(id_counter_dict)
+    if user_id in id_counter_dict:
+        print('here')
+        print( id_counter_dict[user_id] )
+        id_counter_dict[user_id] = str(int(id_counter_dict[user_id]) + 1)
+        id_counter = int(id_counter_dict[user_id])
+    else:
+        print('here2')
+        #print( id_counter_dict[user_id] )
+        id_counter_dict[user_id] = 0
+        id_counter = 0
+    with open('id_counter.csv', 'w') as fw:
+        for key in id_counter_dict.keys():
+            fw.write("%s,%s\n"%(key,id_counter_dict[key]))
 
-    req_id = user_id + '_'  + str(req_data['req_id']) 
+
+    #req_id = user_id + '_'  + str(req_data['req_id']) 
+    req_id = user_id + '_'  + str(id_counter)
     source = str(req_data['type'])
     mode = str(req_data['mode'])
+
+    
 
     ######## Youtube translation to backend format
     if source == 'Youtube':
@@ -57,7 +81,7 @@ def read_request():
     if source == 'Wikitravel':
         source_mode = source + '_' + mode
             
-    query = str(req_data['query'])
+    
     line = [user_id, req_id, source_mode, query]
     print('Writing this to todo.csv')
     print(line)                
@@ -65,11 +89,13 @@ def read_request():
         writer = csv.writer(fw, delimiter=',')
         writer.writerow(line)
     print("Stored in todo")
-    return '200'
+    req_data['server_request_id'] = req_id
+    print(type(req_data))
+    return jsonify(req_data)
 
 
 
-@app.route('/response', methods=["GET","POST"])
+@app.route('/send_results', methods=["GET","POST"])
 @cross_origin(supports_credentials=True)
 def transform_view():
     req_data=request.get_json()
