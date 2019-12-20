@@ -101,8 +101,14 @@ def wikitravel_scraper(query, request_id, level):
 
     TO DO - change the main page html to redirect to the lower level htmls
     '''
-    url = get_wikitravel_link(query)        
-    command = 'wget -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + url
+    url = get_wikitravel_link(query) 
+
+    #windows 
+     #   command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + url
+
+    wget_url = url.replace("(", "\(")
+    wget_url = wget_url.replace(")", "\)")
+    command = 'wget -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + wget_url
     os.system(command)
     if level == 1:
         print('wget done, now looking at level 2')
