@@ -104,20 +104,49 @@ def wikitravel_scraper(query, request_id, level):
             city = link.split('/')[-1]
             print(city)
             command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + link
-            os.system(command)        
+            os.system(command)
+        transform_html(url.split('/')[-1],links)    
     #zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
     #shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
     print('done and saved at results/' + str(request_id) + '.zip')
     return
 
 def transform_html(filename,links):
-    f=codecs.open(filename, 'r', encoding="utf8")
-    content = f.read()
+    '''
+    reads an html file and modifies the links and saves it in another html file called index.html
+
+    Current function specific for wikitravel
+    '''
+
+    # TO DO - replace with appropriate content
+    with codecs.open(filename, 'r', encoding="utf8") as f:
+        soup = BeautifulSoup(f, 'html.parser')
+        
+
+
+        content = f.read()
+        for link in links:
+            city = link.split('/')[-1]
+            html_page = city + '.html'
+            
+            link = 'https://wikitravel.org' + link
+            print('Replacing all ' + link + ' with ' + html_page)
+            #content = re.sub("(<a [^>]*href\s*=\s*['\"])(' + ')?/?", "\\1myfile/sub0/0/", response)
+            content = content.replace('www.google-analytics.com', 'GOOGLE IS SHIT')
+            for a in soup.findAll('a', attrs = {'href':link}):
+                print(a)
+            #a['href'] = a['href'].replace("google", "mysite")
+            result = str(soup)
+
+            content = content.replace(link, html_page)
+        with codecs.open('output5/request_index.html', 'w', encoding="utf8") as fw:
+            fw.write(content)
+    #print(content)
     
-    content = content.replace("www.google-analytics.com", "CHECK THIS SHIT")
-    print(content)
+
+    #print(content)
     
-transform_html('output5/hampi.html',[])
+transform_html('output5/hampi.html',['/en/Hospet'])
 
 ############################# Youtube Scraper ##############################
 

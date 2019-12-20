@@ -47,14 +47,14 @@ def read_request():
     mode = str(req_data['mode'])
 
     ######## Youtube translation to backend format
-    if source == 'youtube':
+    if source == 'Youtube':
         if mode == 'audio':
             source_mode = source + '_0'
         else:
             source_mode = source + '_1'
     
     ######## Wikitravel translatio to backend format
-    if source == 'wikitravel':
+    if source == 'Wikitravel':
         source_mode = source + '_' + mode
             
     query = str(req_data['query'])
