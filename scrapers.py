@@ -95,14 +95,14 @@ def get_links_from_wikitravel_page(url):
 
 def wikitravel_scraper(query, request_id, level):
     '''
-    takes as input a query and saves it in the response folder with title as request id
+    takes as input a query, scraps and saves it in the response folder with title as request id
 
     tested and works - wikitravel_scraper('Hampi', '1_1', 0)
 
     TO DO - change the main page html to redirect to the lower level htmls
     '''
     url = get_wikitravel_link(query)        
-    command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + url
+    command = 'wget -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + url
     os.system(command)
     if level == 1:
         print('wget done, now looking at level 2')
@@ -111,7 +111,7 @@ def wikitravel_scraper(query, request_id, level):
         for link in links:
             city = link.split('/')[-1]
             print(city)
-            command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + link
+            command = 'wget -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + link
             os.system(command)
         transform_html('static/'+request_id+'/'+url.split('/')[-1] + '.html',links,request_id)   
     #zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
@@ -232,7 +232,7 @@ def google_scraper(query,request_id):
     '''
     links = google_top_10(query)
     link = links[0]    
-    command = 'wget.exe -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links -A "*.html,*.css,*.HTML.*.CSS,*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG, *.SVG, *.svg" --no-directories --directory-prefix=static/' + request_id + ' '+ link
+    command = 'wget -N -c -q -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links -A "*.html,*.css,*.HTML.*.CSS,*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG, *.SVG, *.svg" --no-directories --directory-prefix=static/' + request_id + ' '+ link
     os.system(command)
     #zip_a_directory(str(request_id)+'.zip','temp_output/', 'results')
     #shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
