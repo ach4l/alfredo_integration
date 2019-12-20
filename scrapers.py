@@ -44,19 +44,25 @@ def get_wikitravel_link(query):
     '''
     Takes a Wiki travel query (String) and returns the first url (String) given by wikitravel
 
+    Tested and works get_wikitravel_link('hampi') -> /en/hampi
+
     '''
     print('Function running : get_wikitravel_link')
     print('User Query is: ' + query)
     query = query.replace(" ", "+")     # In case query has more than one word
+    pattern = '[0-9]'                   # In case the user query has a number
+    query = re.sub(pattern, '', query)
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1)' }  # I'm a fucking pirate
     url = 'https://wikitravel.org/wiki/en/index.php?search=' + query + '&title=Special%3ASearch&profile=default&fulltext=1'
     req = Request(url=url, headers=headers) 
     html = urlopen(req).read()   
-      
+    print(html) 
 
     # Getting only the top result after parsing the response
     soup = BeautifulSoup(html, 'html.parser')
-    for link in soup.findAll(attrs={'class':'mw-search-result-heading'}):           
+    for link in soup.findAll(attrs={'class':'mw-search-result-heading'}):  
+        print('LINK')
+        print(link)         
         children = link.findChildren("a" , recursive=False)        
         for child in children:            
             result = child['href']
@@ -64,6 +70,8 @@ def get_wikitravel_link(query):
         break
     print(result)
     return result
+
+
 
 def get_links_from_wikitravel_page(url):
     '''
@@ -94,7 +102,7 @@ def wikitravel_scraper(query, request_id, level):
     TO DO - change the main page html to redirect to the lower level htmls
     '''
     url = get_wikitravel_link(query)        
-    command = 'wget.exe -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + url
+    command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + url
     os.system(command)
     if level == 1:
         print('wget done, now looking at level 2')
@@ -105,48 +113,55 @@ def wikitravel_scraper(query, request_id, level):
             print(city)
             command = 'wget.exe -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + link
             os.system(command)
-        transform_html(url.split('/')[-1],links)    
+        transform_html('static/'+request_id+'/'+url.split('/')[-1] + '.html',links,request_id)   
     #zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
     #shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
     print('done and saved at results/' + str(request_id) + '.zip')
     return
 
-def transform_html(filename,links):
+def transform_html(filename,links,request_id):
     '''
     reads an html file and modifies the links and saves it in another html file called index.html
 
     Current function specific for wikitravel
+
+    Tested and worked : transform_html('output5/Hampi.html',['/en/Hospet'])
     '''
 
     # TO DO - replace with appropriate content
+    print('here')
     with codecs.open(filename, 'r', encoding="utf8") as f:
         soup = BeautifulSoup(f, 'html.parser')
         
-
-
+        print('here2')
+        
         content = f.read()
-        for link in links:
-            city = link.split('/')[-1]
-            html_page = city + '.html'
-            
-            link = 'https://wikitravel.org' + link
-            print('Replacing all ' + link + ' with ' + html_page)
-            #content = re.sub("(<a [^>]*href\s*=\s*['\"])(' + ')?/?", "\\1myfile/sub0/0/", response)
-            content = content.replace('www.google-analytics.com', 'GOOGLE IS SHIT')
-            for a in soup.findAll('a', attrs = {'href':link}):
-                print(a)
-            #a['href'] = a['href'].replace("google", "mysite")
-            result = str(soup)
+        print(content)
+    for link in links:
+        city = link.split('/')[-1]
+        html_page = city + '.html'
+        
+        link = 'https://wikitravel.org' + link
+        print('Replacing all ' + link + ' with ' + html_page)
+        #content = re.sub("(<a [^>]*href\s*=\s*['\"])(' + ')?/?", "\\1myfile/sub0/0/", response)
+        #content = content.replace(link, html_page)
+        for a in soup.findAll('a', attrs = {'href':link}):
+            print(a)
+            a['href'] = a['href'].replace(link, html_page)
+        result = str(soup)
 
-            content = content.replace(link, html_page)
-        with codecs.open('output5/request_index.html', 'w', encoding="utf8") as fw:
-            fw.write(content)
-    #print(content)
+        content = content.replace(link, html_page)
+        print('here4')
+    print(content)
+    with codecs.open('static/' + request_id + '/request_index.html', 'w', encoding="utf8") as fw:
+        fw.write(result)
+    print('Linking of various pages done')
+#print(content)
+
+
+#print(content)
     
 
-    #print(content)
-    
-transform_html('output5/hampi.html',['/en/Hospet'])
 
 ############################# Youtube Scraper ##############################
 
@@ -154,6 +169,7 @@ def youtube_scraper(query,request_id, aud_or_vid):
     '''
     takes as input a query and saves it in the response folder with title as request id
     '''        
+    os.mkdir('static/'+request_id)
     query = query.replace(" ", "+")
     print(query)
     url = "http://m.youtube.com/results?search_query=" + query
@@ -186,7 +202,7 @@ def youtube_scraper(query,request_id, aud_or_vid):
                 print("Getting the lowest pososible video resolution")
                 stream = yt.streams.filter(progressive=True).order_by('resolution').desc().last()
                 
-            stream.download('results/', filename=request_id)
+            stream.download('static/'+request_id + '/', filename=request_id)
             
             print('https://m.youtube.com' + vid['href'])
             print('Saved as')

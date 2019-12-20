@@ -100,7 +100,8 @@ def read_request():
 def transform_view():
     req_data=request.get_json()
     user_id = str(req_data['user_id'])
-    req_id = user_id + '_'  + str(req_data['req_id']) 
+    req_id = str(req_data['server_request_id'])
+    #req_id = user_id + '_'  + str(req_data['req_id']) 
     
     UPLOAD_DIRECTORY = 'static/'+req_id
     print('looking for your request in the following directory')
