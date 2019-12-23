@@ -2,7 +2,6 @@ import urllib.request
 from bs4 import BeautifulSoup
 from pytube import YouTube
 import os
-import os.path
 from os import path
 
 # Making the query

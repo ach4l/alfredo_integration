@@ -1,0 +1,2186 @@
+/**
+ * MediaWiki style sheet for general styles on complex content
+ *
+ * Styles for complex things which are a standard part of page content
+ * (ie: the CSS classing built into the system), like the TOC.
+ */
+
+/* Table of Contents */
+#toc,
+.toc,
+.mw-warning {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+    float: left;
+    margin-right: 1em;
+}
+
+/**
+ * We want to display the ToC element with intrinsic width in block mode. The fit-content
+ * value for width is however not supported by large groups of browsers.
+ *
+ * We use display:table. Even though it should only contain other table-* display
+ * elements, there are no known problems with using this.
+ *
+ * Because IE < 8, FF 2 and other older browsers don't support display:table, we fallback to
+ * using inline-block mode, which features at least intrinsic width, but won't clear preceding
+ * inline elements. In practice inline elements surrounding the TOC are uncommon enough that
+ * this is an acceptable sacrifice.
+ */
+#toc,
+.toc {
+    display: -moz-inline-block;
+    display: inline-block;
+    display: table;
+
+    /* IE7 and earlier */
+    zoom: 1;
+    *display: inline;
+
+    padding: 7px;
+}
+
+/* CSS for backwards-compatibility with cached page renders and creative uses in wikitext */
+/*table#toc,
+table.toc {
+        border-collapse: collapse;
+}*/
+/* Remove additional paddings inside table-cells that are not present in <div>s */
+table#toc td,
+table.toc td {
+    padding: 0;
+}
+
+#toc h2,
+.toc h2 {
+    display: inline;
+    border: none;
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+#toc #toctitle,
+.toc #toctitle,
+#toc .toctitle,
+.toc .toctitle {
+    text-align: center;
+}
+#toc ul,
+.toc ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: 0;
+    text-align: left;
+    padding-left: 1em;
+}
+#toc ul ul,
+.toc ul ul {
+    margin: 0 0 0 2em;
+}
+#toc .toctoggle,
+.toc .toctoggle {
+    font-size: 94%;
+}
+
+.toccolours {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+
+/* Warning */
+.mw-warning {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+/* Images */
+/* @noflip */div.floatright, table.floatright {
+    margin: 0 0 .5em .5em;
+    border: 0;
+}
+div.floatright p { font-style: italic; }
+/* @noflip */div.floatleft, table.floatleft {
+    margin: 0 .5em .5em 0;
+    border: 0;
+}
+div.floatleft p { font-style: italic; }
+/* Thumbnails */
+div.thumb {
+    margin-bottom: .5em;
+    width: auto;
+    background-color: transparent;
+}
+div.thumbinner {
+    border: 1px solid #ccc;
+    padding: 3px !important;
+    background-color: #f9f9f9;
+    font-size: 94%;
+    text-align: center;
+    overflow: hidden;
+}
+html .thumbimage {
+    border: 1px solid #ccc;
+}
+html .thumbcaption {
+    border: none;
+    line-height: 1.4em;
+    padding: 3px !important;
+    font-size: 94%;
+}
+div.magnify {
+    border: none !important;
+    background: none !important;
+    margin-left: 3px;
+}
+div.magnify a, div.magnify img {
+    display: block;
+    border: none !important;
+    background: none !important;
+}
+/* @noflip */div.tright {
+    margin: .5em 0 1.3em 1.4em;
+}
+/* @noflip */div.tleft {
+    margin: .5em 1.4em 1.3em 0;
+}
+img.thumbborder {
+    border: 1px solid #dddddd;
+}
+
+/**
+ * Edit forms
+ */
+#editform textarea {
+    display: block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * Basic styles for the user login and create account forms
+ */
+#userlogin, #userloginForm {
+    border: solid 1px #cccccc;
+    padding: 1.2em;
+    margin: 0.5em;
+}
+
+#loginend {
+    margin: 0.5em;
+}
+
+#loginend table {
+    width: 100%;
+}
+
+
+/* Wikitravel TOC stuff */
+
+ul[compact~="compact"] { 
+    display: none;
+}
+
+ul.wt-toc-compact { 
+    display: none;
+}
+
+#p-toc {
+    margin-right: 4em;
+    padding-right: 0.5em;
+    width: 12em;
+    padding-left: 0px;
+}
+
+#p-toc ul,
+.toc ul {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+#p-toc li {
+    display: block;
+}
+
+a.toc-arrow {
+    float: left;
+    margin-left: -3.5ex;
+    text-decoration: none;
+}
+
+#toc{
+    padding-left:25px;
+    font-size: 90%;
+    margin-right: 20px;
+}
+
+
+/*  test*/
+
+.ads {
+    padding-left: 8px;
+    width: 160px;
+    /*border: 1px solid #aaa;*/
+}
+
+.not-patrolled {
+    background-color: #ffa;
+}
+div .patrollink {
+    text-align: right;
+}
+
+.unpatrolled {
+    font-weight: bold;
+    color: red;
+}
+
+/* hack for WT-605 */
+
+pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* Central edit message */
+
+div.cEditMessage {
+	text-align: left;
+	border: 1px solid gray;
+	background: none repeat scroll 0px 0px rgb(240, 230, 168);
+	width: 70%;
+	padding: 10px;
+	margin: 20px 0px 20px 80px;
+}
+
+
+/* PageBanner BEGIN */
+
+/* Styles for Pagebanner template */
+ 
+.topbanner {
+    position: relative;
+    overflow: inherit;
+    max-width: 1800px; 
+    height: auto;
+}
+ 
+.topbanner img {
+    width: 100%;
+    height: auto;
+/*    width: auto\9; */
+}
+ 
+.topbanner-box {
+    position: absolute;
+    z-index: 2;
+    margin-top: 1.5em;
+    color: white;
+    width: 50%;
+    min-width: 20em;
+    left: 2%;
+    text-align: left;
+}
+ 
+.topbanner .topbanner-wrapper {
+    position: absolute;
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.topbanner .name {    
+    position: absolute;
+    z-index: 2;
+    /*margin: 0.1625em;*/
+    padding: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.6);
+    border-radius: 4px;
+    color: white;
+    white-space: normal;
+    max-width: calc(100% - 640px);
+    line-height: 1.2;
+    min-height: 64px;
+}
+ 
+#toc > tbody > tr > td > ul, #toc > tr > td > ul {
+  padding-left: 2em;
+}
+ 
+/* #toc > ul {padding-right: 2em;} */
+ 
+
+
+
+/* FIX TOP NAVIGATION */
+.topbanner table {
+	margin-left: 20px !important;
+}
+ 
+.topbanner table tr:first-child td:first-child {
+	width: auto !important;
+}
+ 
+.topbanner table tr:first-child td:last-child {
+	padding-right: 20px;
+}
+
+
+/* Style for hlist class - pulled from Wikipedia's Common.css file on 20 Mar 2013
+   Style for horizontal lists (separator following item).
+   Note: hlist formatting will break if the resulting HTML lacks a breakable character
+   between list items. This happens when the following conditions are true:
+   1) The list is made using wiki markup (where HTML is built by parser.php)
+   2) HTMLTidy is disabled or unavailable (such as on Special: pages)
+   In such cases, building lists with .hlist using HTML instead of wiki markup
+   will work around this problem. See also [[Bugzilla:39617]].
+   IE8-specific classes are assigned in [[MediaWiki:Common.js/IEFixes.js]].
+   Last updated: January 24, 2013
+   @source mediawiki.org/wiki/Snippets/Horizontal_lists
+   @maintainer: [[User:Edokter]]
+   @revision: 3.1
+*/
+.skin-monobook .hlist dl,
+.skin-modern .hlist dl,
+.skin-vector .hlist dl {
+    line-height: 1.1em;
+}
+.hlist dl,
+.hlist ol,
+.hlist ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1em;
+}
+/* Display list items inline and make them nowrap */
+.hlist dd,
+.hlist dt,
+.hlist li {
+    display: inline;
+    white-space: nowrap;
+}
+/* Allow wrapping for list items (in tight spaces) */
+.hlist.hwrap dd,
+.hlist.hwrap dt,
+.hlist.hwrap li {
+    white-space: normal;
+}
+/* Display nested lists inline and allow them to wrap */
+.hlist dl dl, .hlist dl ol, .hlist dl ul,
+.hlist ol dl, .hlist ol ol, .hlist ol ul,
+.hlist ul dl, .hlist ul ol, .hlist ul ul {
+    display: inline;
+    white-space: normal;
+}
+/* Generate interpuncts */
+.hlist dt:after {
+    content: ":";
+}
+
+
+.hlist dd:after,
+.hlist li:after {
+    content: "·";
+    font-weight: bold;
+    padding: 0 0.3em;
+}
+
+.hlist dd:last-child:after,
+.hlist dt:last-child:after,
+.hlist li:last-child:after {
+    content: none;
+}
+/* For IE8 */
+.hlist dd.hlist-last-child:after,
+.hlist dt.hlist-last-child:after,
+.hlist li.hlist-last-child:after {
+    content: none;
+}
+/* Add parentheses around nested lists */
+.hlist dd dd:first-child:before, .hlist dd dt:first-child:before, .hlist dd li:first-child:before,
+.hlist dt dd:first-child:before, .hlist dt dt:first-child:before, .hlist dt li:first-child:before,
+.hlist li dd:first-child:before, .hlist li dt:first-child:before, .hlist li li:first-child:before {
+    content: "(";
+    font-weight: normal;
+}
+.hlist dd dd:last-child:after, .hlist dd dt:last-child:after, .hlist dd li:last-child:after,
+.hlist dt dd:last-child:after, .hlist dt dt:last-child:after, .hlist dt li:last-child:after,
+.hlist li dd:last-child:after, .hlist li dt:last-child:after, .hlist li li:last-child:after {
+    content: ")";
+    font-weight: normal;
+}
+/* For IE8 */
+.hlist dd dd.hlist-last-child:after, .hlist dd dt.hlist-last-child:after, .hlist dd li.hlist-last-child:after,
+.hlist dt dd.hlist-last-child:after, .hlist dt dt.hlist-last-child:after, .hlist dt li.hlist-last-child:after,
+.hlist li dd.hlist-last-child:after, .hlist li dt.hlist-last-child:after, .hlist li li.hlist-last-child:after {
+    content: ")";
+    font-weight: normal;
+}
+
+.hlist.tocbox-b #toc li:hover a,
+.hlist.tocbox-b #toc .sub-menu a{
+    text-decoration: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+
+
+.hlist .tocUl > li {
+	position: relative;
+	
+}
+
+
+.hlist li .sub-menu {
+  margin: 7px 0px 0px -10px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  visibility: hidden;
+  float:left;
+  left: -1em;
+  top: 24px;
+  position:absolute;
+  list-style: none;
+  padding: 0!important;
+  margin: 0!important;
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
+  width: auto;
+  max-width: 275px;
+  min-width: 0px;
+  z-index: 4;
+  -webkit-transition: all 0.4s;
+  transition:  all 0.4s;
+  opacity: 0;
+}
+
+/* menu fix */
+.topbanner-toc .sub-menu {
+	left: 0 !important;
+}
+
+.topbanner-toc .sub-menu .sub-menu {
+	display: none;
+}
+
+.topbanner-toc .hlist.tocbox-b #toc a {
+	 padding: 8px;//10px;
+	 padding-top: 7px;
+}
+
+/* Sticky Nav */
+.topbanner-toc.stickynav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0px;
+  background-color: #000000;
+}
+
+.topbanner-toc.stickynav .tocUl{
+    text-align: center !important;
+}
+
+.topbanner-toc.stickynav .hlist li .sub-menu {
+    opacity: 1 !important;
+    background-color: #000000 !important;
+}
+
+/* menu fix end*/
+.hlist li:hover .sub-menu {
+	visibility: visible;
+	opacity: 0.8;
+}
+
+.hlist .sub-menu li {
+    padding: 0;
+    position:relative;
+    -webkit-transition: all 0.4s;
+    transition:  all 0.4s;
+    margin: 0;
+    white-space: normal;//nowrap;
+    min-width: 0px;
+    max-width: 200px;
+    width: 100%;
+    /*display: block;
+    height: 0px;
+    visibility: hidden;*/
+    
+}
+
+.hlist li:hover .sub-menu li {
+	//height: auto;
+	//visibility: visible;
+}
+
+.hlist .sub-menu li a {
+	display: block;
+	padding: 7px 1em;
+    float: left;
+    width: 100%;
+}
+
+.hlist .sub-menu li:before,
+.hlist .sub-menu li:after {
+    content:"" !important;
+    padding:0;
+    margin:0;
+}
+
+.topbanner-toc {
+	position: relative;//absolute;
+	//bottom: 2.32%;
+	//left: 50%;
+	z-index: 3;
+	display: table;
+	//transform: translateX(-50%);
+	//-webkit-transform: translateX(-50%); 
+	//-ms-transform: translateX(-50%);
+    margin: -45px auto 0;
+	
+}
+/* allow ToC to stretch across screen when it is part of a horizontal list, change background and font colours  */
+.hlist #toc.tocFloat {
+    width: 100%; 
+    max-width: 170em;
+    color: black;
+}
+ 
+.hlist.tocbox-s #toc.tocFloat {
+    width: 100%; 
+    max-width: 170em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1em;
+    color: black;
+    background-color: #e0e0e0; 
+}
+ 
+div#content .hlist.tocbox-b #toc.tocFloat {
+    width: 100%; 
+    max-width: 170em;
+    margin: 0;
+    padding: 0;
+    color: white;
+    border: none;
+    line-height: 1.1em;
+    background: rgba(0,0,0,0.6); 
+    border-radius: 4px;
+    font-size: medium;
+}
+
+div#content .hlist.tocbox-b {
+    margin-bottom: 32px;
+}
+ 
+.hlist.tocbox-w #toc.tocFloat {
+    width: 100%; 
+    max-width: 170em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1em;
+    color: black;
+    background: rgb(225,225,225); 
+    background: rgba(160,160,160,0.6); 
+    border: none;
+    border-radius: 10px;
+}
+ 
+.hlist #toc table,
+.hlist #toc tr,
+.hlist #toc td, {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1em;
+}
+ 
+/* links in the horizontal ToC should be black... */
+.hlist #toc a {
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+}
+ 
+/* ... except when the ToC box is black ... */
+.hlist.tocbox-b #toc a {    
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+ 
+/* ... or except when being hovered over */
+.hlist #toc.tocFloat a:hover {
+    /*color: #bdddfd;*/
+    background-color: rgba(255, 255, 255, 0.2);
+}
+ 
+/* don't display ToC title when in horizontal ToC */
+.hlist #toctitle {
+    display: none;
+}
+ 
+.mf-mobile-only {
+    display: none;
+}
+
+/* Prevent display of subheadings in horizontal ToC */
+.hlist #toc .toclevel-2,
+.hlist #toc .toclevel-3,
+.hlist #toc .toclevel-4,
+.hlist #toc .toclevel-5,
+.hlist #toc .toclevel-6 {
+    display: none;
+}
+ 
+.hlist .toggleNode {
+    display: none;
+}
+ 
+/* style info for icon box in the top right corner of the banner */
+.iconbox {
+    position: absolute; 
+    top: 6px; 
+    right: 0; 
+    padding: 3px; 
+    z-index: 3; 
+    background: rgb(16,16,16); 
+    background: rgba(0,0,0,0.7); 
+    border-bottom-left-radius: 5px;
+}
+
+@media only screen and  (max-width: 768px) {
+	
+	.hlist.tocbox-b #toc a {
+	    font-size: 0.85em;
+	}
+	
+	.hlist dd:after,
+	.hlist li:after {
+	    padding: 8px 0px;
+	}
+	
+
+}
+
+@media only screen and  (max-width: 1000px) {
+
+	.topbanner div.name {
+		margin: 0.2em 0 0 0.2em;
+		padding: 2px;
+	}
+}
+
+/* PageBanner END */
+
+
+/* PageBanner2 BEGIN */
+
+/* Styles for Pagebanner template */
+ 
+ div#moved_title {
+ 	font-size: 300%;
+ 	margin: 20px 0;
+ }
+ 
+.topbanner2 {
+    position: relative;
+    overflow: hidden;
+    max-width: 1800px; 
+    height: auto;
+}
+ 
+.topbanner2 img {
+    width: 100%;
+/*    height: auto;
+    width: auto\9; */
+}
+ 
+.topbanner2-box {
+    position: absolute;
+    z-index: 2;
+    margin-top: 1.5em;
+    color: white;
+    width: 50%;
+    min-width: 20em;
+    left: 2%;
+    text-align: left;
+}
+ 
+.topbanner2 .name {
+    position: absolute;
+    z-index: 2;
+    margin: 0.6em 0 0 0.4em;
+    padding: 8px 7px;
+    font-size: 2.2em;
+    font-weight: bold;
+    background: rgb(16,16,16);
+    background: rgba(0,0,0,0.6);
+    border-radius: 4px;
+    color: white;
+    white-space: nowrap;
+    line-height: 0.9em;
+}
+ 
+#toc > tbody > tr > td > ul, #toc > tr > td > ul {
+  padding-left: 2em;
+}
+ 
+
+
+/* FIX TOP NAVIGATION */
+.topbanner2 table {
+	margin-left: 20px !important;
+}
+ 
+.topbanner2 table tr:first-child td:first-child {
+	width: auto !important;
+}
+ 
+.topbanner2 table tr:first-child td:last-child {
+	padding-right: 20px;
+}
+
+
+
+.topbanner2-toc {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	z-index: 3;
+	transform: translateX(-50%);
+}
+
+
+
+
+/* PageBanner2 END */
+
+/* ClickTripz Widget */
+/* shared hotfix: ct-sidebar for hotel layout */
+.ct-sidebar {
+    border-bottom: none !important;
+    background: transparent !important;
+}
+
+.ct-sidebar .ct-widget__body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent;
+}
+
+.icon-in-out-fields {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    background-size: 90px auto;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding-top: 9px;
+}
+
+.ct-widget__container {
+    /*width: 24.303%;
+    max-width: 200px;*/
+    float: right;
+    background: rgba(0,0,0,0.6);
+    padding: 0px 10px 0px 10px;
+    border-radius: 4px;
+    /*width: 620px;*/
+}
+
+.widget-header {
+	font-size: 24px;
+	padding-top: 15px;
+	color: #fff;
+	font-weight: 400;
+	float: left;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+.ct-widget__widget input,
+.ct-widget__widget select,
+.ct-widget__widget .btn-guests {
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    font-size: 16px;
+    color: #888;
+    border: 1px solid #d7d7d7;
+    border-right: 0;
+    padding-left: 78px;
+    float: none;
+    box-sizing: border-box;
+    outline: 0;
+    cursor: pointer;
+}
+
+.ct-widget__widget input:hover{
+    color: #333;
+}
+
+.ct-widget__widget .btn-guests{
+    background: #FFF;
+    border-radius: 0;
+    text-align: left;
+}
+
+.ct-widget__widget .caret-guests{
+    position: absolute;
+    right: 15px;
+    top: 18px;
+}
+
+.ct-widget__widget .dropdown-menu {
+    width: 100%;
+    margin: 0;
+    border: 1px solid #cdcdcd;
+    border-top: 0;
+    border-radius: 0;
+    padding: 20px;
+}
+
+.ct-widget__widget .ct-widget__input--invalid {
+    border: 1px solid red;
+}
+
+.ct-widget__widget select {
+    border-radius: 0;
+    background: white;
+    background-image: none;
+}
+
+.ct-widget__widget option[value=""][disabled] {
+    display: none;
+}
+
+.ct-widget__widget option {
+    color: #333;
+}
+
+.ct-widget__widget .icon {
+    position: absolute;
+    left: 52px;
+    top: 9px;
+    width: 17px;
+    height: 15px;
+    background-color: transparent;
+    background-size: 54px auto;
+    background-repeat: no-repeat;
+    background-image: url('bookingwidget_sprites_2x.png');
+}
+
+.ct-widget__widget .pre-icon-calendar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 36px;
+    background-color: #aaaaaa;
+    background-size: 90px auto;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 7px;
+    font-size: medium;
+}
+
+.ct-widget__widget .icon.icon-calendar {
+    background-position: 2px 2px;
+}
+
+.ct-widget__widget .icon.icon-guests {
+    background-position: -30px 2px;
+}
+
+.ct-widget__widget .icon.icon-rooms {
+    background-position: -64px 2px;
+}
+
+.ct-widget__widget .operator-container{
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.ct-widget__widget .icon-operator{
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ct-widget__widget .dropdown-menu .legend-guests,
+.ct-widget__widget .dropdown-menu .legend-rooms{
+    font-size: 18px;
+    display: inline-block;
+    line-height: 38px;
+}
+
+.icon-plus {
+    background-image: url('plus-active.png');
+}
+
+.icon-minus {
+    background-image: url('minus-active.png');
+}
+
+.icon-plus.icon-inactive {
+    background-image: url('plus-inactive.png');
+}
+
+.icon-minus.icon-inactive {
+    background-image: url('minus-inactive.png');
+}
+
+.no-appearance .ct-widget__widget .fa {
+    display: none;
+}
+
+.ct-widget__form-group-city {
+    width: 0;
+    display: none;
+}
+
+.ct-widget__drop-down-guests,
+.ct-widget__form-group-checkin,
+.ct-widget__form-group-checkout {
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+.ct-widget__form-group-checkin,
+.ct-widget__form-group-checkout {
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.ct-widget__drop-down-guests{
+    width: 40%;
+}
+
+.ct-widget__compare-providers {
+    display: none;
+}
+
+.ct-widget__submit {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    color: #FFF;
+    font-family: Helvetica, Arial, "Lucida Grande", sans-serif; ;
+    font-weight: bold;
+    text-decoration: none;
+    background: #F07D31;
+    padding: 10px 6px;
+    width: 100%;
+    height: 36px;
+    float: right;
+    border: 0px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: 0;
+    cursor: pointer;
+}
+
+.booking-widget .prefix-icon {
+    font-size: 14px;
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.booking-widget .prefix-icon.fa-user {
+    font-size: 16px;
+}
+
+
+#ctHotelsDateCheckIn{
+    -webkit-border-radius: 2px 0px 0px 2px;
+    -moz-border-radius: 2px 0px 0px 2px;
+    -ms-border-radius: 2px 0px 0px 2px;
+    border-radius: 2px 0px 0px 2px;
+}
+
+#ui-datepicker-div {
+    width: 200px;
+}
+
+@media only screen and  (max-width: 1050px) {
+    
+    .ct-widget__widget .dropdown-menu .legend-guests,
+    .ct-widget__widget .dropdown-menu .legend-rooms,
+    .ct-widget__widget input,
+    .ct-widget__widget select,
+    .ct-widget__widget .btn-guests{
+        font-size: 12px;
+    }
+
+    .ct-widget__widget input, 
+    .ct-widget__widget select,
+    .ct-widget__widget .btn-guests{
+        padding: 0px 0px 0px 40px;
+    }
+    
+
+}
+
+.datepicker table tr td.active:active, 
+.datepicker table tr td.active.highlighted:active, 
+.datepicker table tr td.active.active, 
+.datepicker table tr td.active.highlighted.active{
+    background-color: #3087b7!important;
+    border-color: #3087b7!important;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .topbanner-toc .hlist.tocbox-b #toc a {
+		padding: 10px 9px;
+	}
+   
+	.hlist.tocbox-b #toc a {
+		font-size: 0.8em;
+	}
+	
+	.ct-widget__form-group-checkin, .ct-widget__form-group-checkout {
+		margin-bottom: 5px;
+	}
+	
+	.ct-widget__widget input, .ct-widget__widget select, .ct-widget__widget .btn-guests {
+		height: 33px;
+	}
+	
+	.ct-widget__widget .pre-icon-calendar {
+		height: 33px;
+		padding-top: 4px;
+	}
+	
+	.ct-widget__widget .icon {
+		top: 7px;
+	}
+	
+	.ct-widget__submit {
+		height: 33px;
+		padding: 8px 6px;
+	}
+	
+	/*.topbanner .name {
+		font-size: 1.8em;
+	}*/
+	
+	/*.widget-header {
+		font-size: 1.4em;
+	}*/
+
+}
+
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/*.stickynav + .content {
+  padding-top: 60px;
+}*/
+
+
+
+
+/* booking widget new - BEGIN */
+
+.booking-widget-container {
+ margin-left:0;
+ margin-right:0;
+ float: right;
+ /*width: calc(100% - 240px);*/
+}
+.booking-widget-container:before,
+.booking-widget-container:after {
+ content:" ";
+ display:table
+}
+.booking-widget-container:after {
+ clear:both
+}
+.booking-widget-container .booking-widget {
+ position:relative;
+ float:left;
+ width:100%;
+ min-height:1px;
+ padding-left:15px;
+ padding-right:15px
+}
+.booking-widget-container .booking-widget .booking-form-hotels {
+ margin-left:-15px;
+ margin-right:-15px
+}
+.booking-widget-container .booking-widget .booking-form-hotels:before,
+.booking-widget-container .booking-widget .booking-form-hotels:after {
+ content:" ";
+ display:table
+}
+.booking-widget-container .booking-widget .booking-form-hotels:after {
+ clear:both
+}
+.booking-widget .booking-form-group-city {
+ display:none
+}
+.booking-widget .booking-form-group-checkin-checkout {
+ position:relative;
+ float:left;
+ width:100%;
+ min-height:1px;
+ padding-left:0;
+ padding-right:0;
+ position:relative;
+ min-height:1px;
+ padding-left:0;
+ padding-right:0
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-form-group-checkin-checkout {
+  float:left;
+  width:198px;
+ }
+}
+.booking-widget .booking-form-group-guests-rooms {
+ display:block;
+ position:relative;
+ float:left;
+ width:100%;
+ min-height:1px;
+ padding-left:0;
+ padding-right:0;
+ position:relative;
+ min-height:1px;
+ padding-left:0;
+ padding-right:0
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-form-group-guests-rooms {
+  float:left;
+  width:192px;
+ }
+}
+.booking-widget .booking-form-group-guests-rooms .booking-display-dropdown {
+ width:100%;
+ margin-top:0;
+ padding-left:20px;
+ padding-right:20px;
+ border-radius:0;
+ padding-top: 0;
+  padding-bottom: 0;
+}
+.booking-widget .booking-form-group-guests-rooms .booking-display-dropdown>li {
+ padding-top:16px;
+ padding-bottom:16px;
+ border-bottom:1px solid #dfdfdf
+}
+.booking-widget .booking-form-group-guests-rooms .booking-display-dropdown>li:last-child {
+ border-bottom:0
+}
+.booking-widget .booking-form-group-guests-rooms .booking-value-input:before,
+.booking-widget .booking-form-group-guests-rooms .booking-value-input:after {
+ content:" ";
+ display:table
+}
+.booking-widget .booking-form-group-guests-rooms .booking-value-input:after {
+ clear:both
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-display {
+ font:400 16px/36px Roboto,Helvetica,Arial,Sans-Serif
+}
+@media (min-width: 992px) {
+ .booking-widget .booking-form-group-guests-rooms .value-input-display {
+  font-size:16px;
+ }
+}
+.booking-widget .booking-form-group-guests-rooms .booking-value-input-increment {
+ display:inline-block;
+ float:right
+}
+.booking-widget .booking-form-group-guests-rooms .booking-value-input-increment .fa {
+    line-height: 28px;
+    font-size: 16px;
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-increment-btn {
+ width:32px;
+ height:32px;
+ color:#f07d31;
+ font-size:18px;
+ vertical-align:middle;
+ border:2px solid;
+ border-radius:50%;
+ background-color: transparent;
+ cursor: pointer;
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-increment-btn:disabled {
+ color:#959595
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-subtract {
+ margin-right:5px
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-submit-btn {
+ font:400 16px/24px Roboto,Helvetica,Arial,Sans-Serif;
+ border: none;
+ background-color: transparent;
+ cursor: pointer;
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-cancel {
+ display:none;
+ color:#959595
+}
+.booking-widget .booking-form-group-guests-rooms .value-input-apply {
+ float:right;
+ color:#3ca09e;
+ font-weight:bold
+}
+.booking-widget .booking-form-group-checkin-checkout,
+.booking-widget .booking-form-group-guests,
+.booking-widget .booking-form-group-rooms,
+.booking-widget .booking-form-group-guests-rooms {
+ margin-bottom:10px
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-form-group-checkin-checkout,
+ .booking-widget .booking-form-group-guests,
+ .booking-widget .booking-form-group-rooms,
+ .booking-widget .booking-form-group-guests-rooms {
+  margin-bottom:0
+ }
+}
+.booking-widget .booking-display-button {
+ /*padding:9px 15px;*/
+ width:100%;
+ text-align:left;
+ border:1px solid #d7d7d7;
+ background-color:#fff;
+ border-radius:0;
+ cursor: pointer;
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-display-button {
+  padding-top:5px;
+  padding-bottom:10px
+ }
+}
+.booking-widget .booking-display-button .fa-chevron-down {
+ float:right;
+ color:#f07d31;
+ line-height:16px;
+ vertical-align:text-bottom;
+ margin-top: 0px;
+ font-size: 14px;
+}
+
+.booking-widget .booking-display-checkin-checkout .fa-long-arrow-right {
+ margin-left:10px;
+ margin-right:10px;
+ font-size:16px
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-display-checkin-checkout .fa-long-arrow-right {
+  /*margin-left:14px;
+  margin-right:14px;*/
+  font-size:16px
+ }
+}
+@media (min-width: 992px) {
+ .booking-widget .booking-display-checkin-checkout .fa-long-arrow-right {
+  font-size:16px
+ }
+}
+.booking-widget .booking-display-label {
+ display:block;
+ margin-bottom:6px;
+ font:400 10px/10px Roboto,Helvetica,Arial,Sans-Serif;
+ color:#959595;
+ text-transform:uppercase
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-display-label {
+  margin-bottom:0;
+  font-size:10px;
+  line-height:14px
+ }
+}
+.booking-widget .booking-display-label .icon {
+ height:14px;
+ margin-right:10px;
+ vertical-align:text-bottom
+}
+.booking-widget .booking-display-value {
+ display:inline-block;
+ font:400 16px/16px Playfair Display,"Roboto",Helvetica,Arial,Sans-Serif
+}
+@media (min-width: 768px) {
+ .booking-widget .booking-display-value {
+  font-size:12px;
+  line-height: 1;
+ }
+}
+@media (min-width: 992px) {
+ .booking-widget .booking-display-value {
+  font-size:14px;
+  line-height: 1;
+ }
+}
+.booking-widget .booking-form-input {
+ visibility:hidden;
+ position:absolute;
+ left:0;
+ bottom:0
+}
+.booking-widget .booking-form-compare-providers {
+ display:none
+}
+.booking-widget .booking-form-submit {
+ position:relative;
+ float:left;
+ width:100%;
+ min-height:1px;
+ padding-left:0;
+ padding-right:0;
+ position:relative;
+ min-height:1px;
+ padding-left:0;
+ padding-right:0;
+ padding:12px 15px;
+ background-color:#f07d31;
+ font:400 16px/16px Poppins,"Roboto",Helvetica,Arial,Sans-Serif;
+ color:#fff;
+ text-align:center;
+ text-transform:uppercase;
+ border-radius:0;
+ border: none;
+ width: 48px;
+ height: 48px;
+ cursor: pointer;
+}
+
+.booking-widget .booking-form-submit .fa {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.h_overview .booking-widget .booking-form-group-checkin-checkout {
+ width:100%
+}
+@media (min-width: 768px) {
+ .h_overview .booking-widget .booking-form-group-checkin-checkout {
+  width:70%
+ }
+}
+.h_overview .booking-widget .booking-form-group-guests-rooms {
+ display:none
+}
+.h_overview .booking-widget .booking-display-button {
+ padding:9px 10px
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+ .h_overview .booking-widget .booking-display-button {
+  padding-left:12px;
+  padding-right:12px
+ }
+}
+@media (min-width: 768px) {
+ .h_overview .booking-widget .booking-display-checkin-checkout .fa-long-arrow-right {
+  font-size:18px
+ }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+ .h_overview .booking-widget .booking-display-checkin-checkout .fa-long-arrow-right {
+  margin-left:8px;
+  margin-right:8px
+ }
+}
+.h_overview .booking-widget .booking-display-label {
+ font-size:10px;
+ line-height:10px
+}
+@media (min-width: 768px) {
+ .h_overview .booking-widget .booking-display-label {
+  margin-bottom:4px
+ }
+}
+@media (min-width: 768px) {
+ .h_overview .booking-widget .booking-display-value {
+  font-size:18px;
+  line-height:18px
+ }
+}
+.h_overview .booking-widget .booking-form-submit {
+ width:100%;
+ padding:12px 15px
+}
+@media (min-width: 768px) {
+ .h_overview .booking-widget .booking-form-submit {
+  width:30%;
+  padding:22px 10px
+ }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+ .h_overview .booking-widget .booking-form-submit {
+  padding-left:5px;
+  padding-right:5px
+ }
+}
+.h_list_page .booking-widget {
+ margin-bottom:25px
+}
+@media (min-width: 768px) {
+ .h_list_page .booking-widget {
+  margin-bottom:0
+ }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+ .h_list_page .booking-widget .booking-display-button {
+  padding-left:12px;
+  padding-right:12px
+ }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+ .h_list_page .booking-widget .booking-form-submit {
+  padding-left:4px;
+  padding-right:4px
+ }
+}
+.datepicker {
+ border-radius:0
+}
+.datepicker table tr td,
+.datepicker table tr th {
+ border-radius:0
+}
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+ color:#777
+}
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+ background:#eee;
+ cursor:pointer
+}
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+ background:none;
+ color:#777;
+ cursor:default
+}
+.datepicker table tr td.highlighted {
+ color:#000;
+ background-color:#d9edf7;
+ border-color:#85c5e5;
+ border-radius:0
+}
+.datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.focus {
+ color:#000;
+ background-color:#afd9ee;
+ border-color:#298fc2
+}
+.datepicker table tr td.highlighted:hover {
+ color:#000;
+ background-color:#afd9ee;
+ border-color:#52addb
+}
+.datepicker table tr td.highlighted:active,
+.datepicker table tr td.highlighted.active,
+.open>.datepicker table tr td.highlighted.dropdown-toggle {
+ color:#000;
+ background-color:#afd9ee;
+ border-color:#52addb
+}
+.datepicker table tr td.highlighted:active:hover,
+.datepicker table tr td.highlighted:active:focus,
+.datepicker table tr td.highlighted:active.focus,
+.datepicker table tr td.highlighted.active:hover,
+.datepicker table tr td.highlighted.active:focus,
+.datepicker table tr td.highlighted.active.focus,
+.open>.datepicker table tr td.highlighted.dropdown-toggle:hover,
+.open>.datepicker table tr td.highlighted.dropdown-toggle:focus,
+.open>.datepicker table tr td.highlighted.dropdown-toggle.focus {
+ color:#000;
+ background-color:#91cbe8;
+ border-color:#298fc2
+}
+.datepicker table tr td.highlighted:active,
+.datepicker table tr td.highlighted.active,
+.open>.datepicker table tr td.highlighted.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.highlighted.disabled:hover,
+.datepicker table tr td.highlighted.disabled:focus,
+.datepicker table tr td.highlighted.disabled.focus,
+.datepicker table tr td.highlighted[disabled]:hover,
+.datepicker table tr td.highlighted[disabled]:focus,
+.datepicker table tr td.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.highlighted:hover,
+fieldset[disabled] .datepicker table tr td.highlighted:focus,
+fieldset[disabled] .datepicker table tr td.highlighted.focus {
+ background-color:#d9edf7;
+ border-color:#85c5e5
+}
+.datepicker table tr td.highlighted .badge {
+ color:#d9edf7;
+ background-color:#000
+}
+.datepicker table tr td.highlighted.focused {
+ background:#afd9ee
+}
+.datepicker table tr td.highlighted.disabled,
+.datepicker table tr td.highlighted.disabled:active {
+ background:#d9edf7;
+ color:#777
+}
+.datepicker table tr td.today {
+ color:#000;
+ background-color:#ffdb99;
+ border-color:#ffb733
+}
+.datepicker table tr td.today:focus,
+.datepicker table tr td.today.focus {
+ color:#000;
+ background-color:#ffc966;
+ border-color:#b37400
+}
+.datepicker table tr td.today:hover {
+ color:#000;
+ background-color:#ffc966;
+ border-color:#f59e00
+}
+.datepicker table tr td.today:active,
+.datepicker table tr td.today.active,
+.open>.datepicker table tr td.today.dropdown-toggle {
+ color:#000;
+ background-color:#ffc966;
+ border-color:#f59e00
+}
+.datepicker table tr td.today:active:hover,
+.datepicker table tr td.today:active:focus,
+.datepicker table tr td.today:active.focus,
+.datepicker table tr td.today.active:hover,
+.datepicker table tr td.today.active:focus,
+.datepicker table tr td.today.active.focus,
+.open>.datepicker table tr td.today.dropdown-toggle:hover,
+.open>.datepicker table tr td.today.dropdown-toggle:focus,
+.open>.datepicker table tr td.today.dropdown-toggle.focus {
+ color:#000;
+ background-color:#ffbc42;
+ border-color:#b37400
+}
+.datepicker table tr td.today:active,
+.datepicker table tr td.today.active,
+.open>.datepicker table tr td.today.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today.disabled.focus,
+.datepicker table tr td.today[disabled]:hover,
+.datepicker table tr td.today[disabled]:focus,
+.datepicker table tr td.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.today:hover,
+fieldset[disabled] .datepicker table tr td.today:focus,
+fieldset[disabled] .datepicker table tr td.today.focus {
+ background-color:#ffdb99;
+ border-color:#ffb733
+}
+.datepicker table tr td.today .badge {
+ color:#ffdb99;
+ background-color:#000
+}
+.datepicker table tr td.today.focused {
+ background:#ffc966
+}
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:active {
+ background:#ffdb99;
+ color:#777
+}
+.datepicker table tr td.range {
+ color:#fff;
+ background-color:#f6a623;
+ border-color:#ac6d07;
+ border-radius:0
+}
+.datepicker table tr td.range:focus,
+.datepicker table tr td.range.focus {
+ color:#fff;
+ background-color:#dd8d09;
+ border-color:#311f02
+}
+.datepicker table tr td.range:hover {
+ color:#fff;
+ background-color:#dd8d09;
+ border-color:#714805
+}
+.datepicker table tr td.range:active,
+.datepicker table tr td.range.active,
+.open>.datepicker table tr td.range.dropdown-toggle {
+ color:#fff;
+ background-color:#dd8d09;
+ border-color:#714805
+}
+.datepicker table tr td.range:active:hover,
+.datepicker table tr td.range:active:focus,
+.datepicker table tr td.range:active.focus,
+.datepicker table tr td.range.active:hover,
+.datepicker table tr td.range.active:focus,
+.datepicker table tr td.range.active.focus,
+.open>.datepicker table tr td.range.dropdown-toggle:hover,
+.open>.datepicker table tr td.range.dropdown-toggle:focus,
+.open>.datepicker table tr td.range.dropdown-toggle.focus {
+ color:#fff;
+ background-color:#bb7708;
+ border-color:#311f02
+}
+.datepicker table tr td.range:active,
+.datepicker table tr td.range.active,
+.open>.datepicker table tr td.range.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.range.disabled:hover,
+.datepicker table tr td.range.disabled:focus,
+.datepicker table tr td.range.disabled.focus,
+.datepicker table tr td.range[disabled]:hover,
+.datepicker table tr td.range[disabled]:focus,
+.datepicker table tr td.range[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range:hover,
+fieldset[disabled] .datepicker table tr td.range:focus,
+fieldset[disabled] .datepicker table tr td.range.focus {
+ background-color:#f6a623;
+ border-color:#ac6d07
+}
+.datepicker table tr td.range .badge {
+ color:#f6a623;
+ background-color:#fff
+}
+.datepicker table tr td.range.focused {
+ background:#dd8d09
+}
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:active {
+ background:#f6a623;
+ color:#777
+}
+.datepicker table tr td.range.highlighted {
+ color:#fff;
+ background-color:#f2ca89;
+ border-color:#e8a12d
+}
+.datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.focus {
+ color:#fff;
+ background-color:#edb55b;
+ border-color:#87590f
+}
+.datepicker table tr td.range.highlighted:hover {
+ color:#fff;
+ background-color:#edb55b;
+ border-color:#c28015
+}
+.datepicker table tr td.range.highlighted:active,
+.datepicker table tr td.range.highlighted.active,
+.open>.datepicker table tr td.range.highlighted.dropdown-toggle {
+ color:#fff;
+ background-color:#edb55b;
+ border-color:#c28015
+}
+.datepicker table tr td.range.highlighted:active:hover,
+.datepicker table tr td.range.highlighted:active:focus,
+.datepicker table tr td.range.highlighted:active.focus,
+.datepicker table tr td.range.highlighted.active:hover,
+.datepicker table tr td.range.highlighted.active:focus,
+.datepicker table tr td.range.highlighted.active.focus,
+.open>.datepicker table tr td.range.highlighted.dropdown-toggle:hover,
+.open>.datepicker table tr td.range.highlighted.dropdown-toggle:focus,
+.open>.datepicker table tr td.range.highlighted.dropdown-toggle.focus {
+ color:#fff;
+ background-color:#e9a73b;
+ border-color:#87590f
+}
+.datepicker table tr td.range.highlighted:active,
+.datepicker table tr td.range.highlighted.active,
+.open>.datepicker table tr td.range.highlighted.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.range.highlighted.disabled:hover,
+.datepicker table tr td.range.highlighted.disabled:focus,
+.datepicker table tr td.range.highlighted.disabled.focus,
+.datepicker table tr td.range.highlighted[disabled]:hover,
+.datepicker table tr td.range.highlighted[disabled]:focus,
+.datepicker table tr td.range.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted:hover,
+fieldset[disabled] .datepicker table tr td.range.highlighted:focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted.focus {
+ background-color:#f2ca89;
+ border-color:#e8a12d
+}
+.datepicker table tr td.range.highlighted .badge {
+ color:#f2ca89;
+ background-color:#fff
+}
+.datepicker table tr td.range.highlighted.focused {
+ background:#edb55b
+}
+.datepicker table tr td.range.highlighted.disabled,
+.datepicker table tr td.range.highlighted.disabled:active {
+ background:#f2ca89;
+ color:#777
+}
+.datepicker table tr td.range.today {
+ color:#000;
+ background-color:#f7ca77;
+ border-color:#f1a417
+}
+.datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.focus {
+ color:#000;
+ background-color:#f4b747;
+ border-color:#815608
+}
+.datepicker table tr td.range.today:hover {
+ color:#000;
+ background-color:#f4b747;
+ border-color:#c0800b
+}
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today.active,
+.open>.datepicker table tr td.range.today.dropdown-toggle {
+ color:#000;
+ background-color:#f4b747;
+ border-color:#c0800b
+}
+.datepicker table tr td.range.today:active:hover,
+.datepicker table tr td.range.today:active:focus,
+.datepicker table tr td.range.today:active.focus,
+.datepicker table tr td.range.today.active:hover,
+.datepicker table tr td.range.today.active:focus,
+.datepicker table tr td.range.today.active.focus,
+.open>.datepicker table tr td.range.today.dropdown-toggle:hover,
+.open>.datepicker table tr td.range.today.dropdown-toggle:focus,
+.open>.datepicker table tr td.range.today.dropdown-toggle.focus {
+ color:#000;
+ background-color:#f2aa25;
+ border-color:#815608
+}
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today.active,
+.open>.datepicker table tr td.range.today.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today.disabled:focus,
+.datepicker table tr td.range.today.disabled.focus,
+.datepicker table tr td.range.today[disabled]:hover,
+.datepicker table tr td.range.today[disabled]:focus,
+.datepicker table tr td.range.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.today:hover,
+fieldset[disabled] .datepicker table tr td.range.today:focus,
+fieldset[disabled] .datepicker table tr td.range.today.focus {
+ background-color:#f7ca77;
+ border-color:#f1a417
+}
+.datepicker table tr td.range.today .badge {
+ color:#f7ca77;
+ background-color:#000
+}
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:active {
+ background:#f7ca77;
+ color:#777
+}
+.datepicker table tr td.selected,
+.datepicker table tr td.selected.highlighted {
+ color:#fff;
+ background-color:#f07d31;
+ border-color:#f07d31;
+ text-shadow:none
+}
+.datepicker table tr td.selected:focus,
+.datepicker table tr td.selected.focus,
+.datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.highlighted.focus {
+ color:#fff;
+ background-color:#de6210;
+ border-color:#97430b
+}
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.highlighted:hover {
+ color:#fff;
+ background-color:#de6210;
+ border-color:#d45e0f
+}
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected.active,
+.open>.datepicker table tr td.selected.dropdown-toggle,
+.datepicker table tr td.selected.highlighted:active,
+.datepicker table tr td.selected.highlighted.active,
+.open>.datepicker table tr td.selected.highlighted.dropdown-toggle {
+ color:#fff;
+ background-color:#de6210;
+ border-color:#d45e0f
+}
+.datepicker table tr td.selected:active:hover,
+.datepicker table tr td.selected:active:focus,
+.datepicker table tr td.selected:active.focus,
+.datepicker table tr td.selected.active:hover,
+.datepicker table tr td.selected.active:focus,
+.datepicker table tr td.selected.active.focus,
+.open>.datepicker table tr td.selected.dropdown-toggle:hover,
+.open>.datepicker table tr td.selected.dropdown-toggle:focus,
+.open>.datepicker table tr td.selected.dropdown-toggle.focus,
+.datepicker table tr td.selected.highlighted:active:hover,
+.datepicker table tr td.selected.highlighted:active:focus,
+.datepicker table tr td.selected.highlighted:active.focus,
+.datepicker table tr td.selected.highlighted.active:hover,
+.datepicker table tr td.selected.highlighted.active:focus,
+.datepicker table tr td.selected.highlighted.active.focus,
+.open>.datepicker table tr td.selected.highlighted.dropdown-toggle:hover,
+.open>.datepicker table tr td.selected.highlighted.dropdown-toggle:focus,
+.open>.datepicker table tr td.selected.highlighted.dropdown-toggle.focus {
+ color:#fff;
+ background-color:#bd530e;
+ border-color:#97430b
+}
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected.active,
+.open>.datepicker table tr td.selected.dropdown-toggle,
+.datepicker table tr td.selected.highlighted:active,
+.datepicker table tr td.selected.highlighted.active,
+.open>.datepicker table tr td.selected.highlighted.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.disabled:focus,
+.datepicker table tr td.selected.disabled.focus,
+.datepicker table tr td.selected[disabled]:hover,
+.datepicker table tr td.selected[disabled]:focus,
+.datepicker table tr td.selected[disabled].focus,
+fieldset[disabled] .datepicker table tr td.selected:hover,
+fieldset[disabled] .datepicker table tr td.selected:focus,
+fieldset[disabled] .datepicker table tr td.selected.focus,
+.datepicker table tr td.selected.highlighted.disabled:hover,
+.datepicker table tr td.selected.highlighted.disabled:focus,
+.datepicker table tr td.selected.highlighted.disabled.focus,
+.datepicker table tr td.selected.highlighted[disabled]:hover,
+.datepicker table tr td.selected.highlighted[disabled]:focus,
+.datepicker table tr td.selected.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:hover,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
+ background-color:#f07d31;
+ border-color:#f07d31
+}
+.datepicker table tr td.selected .badge,
+.datepicker table tr td.selected.highlighted .badge {
+ color:#f07d31;
+ background-color:#fff
+}
+.datepicker table tr td.active,
+.datepicker table tr td.active.highlighted {
+ color:#fff;
+ background-color:#f39b61;
+ border-color:#f4a16a;
+ text-shadow:none
+}
+.datepicker table tr td.active:focus,
+.datepicker table tr td.active.focus,
+.datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.highlighted.focus {
+ color:#fff;
+ background-color:#f07d31;
+ border-color:#d05c0f
+}
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.highlighted:hover {
+ color:#fff;
+ background-color:#f07d31;
+ border-color:#f07d31
+}
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.active,
+.open>.datepicker table tr td.active.dropdown-toggle,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.highlighted.active,
+.open>.datepicker table tr td.active.highlighted.dropdown-toggle {
+ color:#fff;
+ background-color:#f07d31;
+ border-color:#f07d31
+}
+.datepicker table tr td.active:active:hover,
+.datepicker table tr td.active:active:focus,
+.datepicker table tr td.active:active.focus,
+.datepicker table tr td.active.active:hover,
+.datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.active.focus,
+.open>.datepicker table tr td.active.dropdown-toggle:hover,
+.open>.datepicker table tr td.active.dropdown-toggle:focus,
+.open>.datepicker table tr td.active.dropdown-toggle.focus,
+.datepicker table tr td.active.highlighted:active:hover,
+.datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.highlighted:active.focus,
+.datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active.highlighted.active:focus,
+.datepicker table tr td.active.highlighted.active.focus,
+.open>.datepicker table tr td.active.highlighted.dropdown-toggle:hover,
+.open>.datepicker table tr td.active.highlighted.dropdown-toggle:focus,
+.open>.datepicker table tr td.active.highlighted.dropdown-toggle.focus {
+ color:#fff;
+ background-color:#ec6811;
+ border-color:#d05c0f
+}
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.active,
+.open>.datepicker table tr td.active.dropdown-toggle,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.highlighted.active,
+.open>.datepicker table tr td.active.highlighted.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:focus,
+.datepicker table tr td.active.disabled.focus,
+.datepicker table tr td.active[disabled]:hover,
+.datepicker table tr td.active[disabled]:focus,
+.datepicker table tr td.active[disabled].focus,
+fieldset[disabled] .datepicker table tr td.active:hover,
+fieldset[disabled] .datepicker table tr td.active:focus,
+fieldset[disabled] .datepicker table tr td.active.focus,
+.datepicker table tr td.active.highlighted.disabled:hover,
+.datepicker table tr td.active.highlighted.disabled:focus,
+.datepicker table tr td.active.highlighted.disabled.focus,
+.datepicker table tr td.active.highlighted[disabled]:hover,
+.datepicker table tr td.active.highlighted[disabled]:focus,
+.datepicker table tr td.active.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted:hover,
+fieldset[disabled] .datepicker table tr td.active.highlighted:focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
+ background-color:#f39b61;
+ border-color:#f4a16a
+}
+.datepicker table tr td.active .badge,
+.datepicker table tr td.active.highlighted .badge {
+ color:#f39b61;
+ background-color:#fff
+}
+.datepicker table tr td span {
+ border-radius:0
+}
+.datepicker table tr td span:hover,
+.datepicker table tr td span.focused {
+ background:#eee
+}
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+ background:none;
+ color:#777;
+ cursor:default
+}
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+ color:#fff;
+ background-color:#f07d31;
+ border-color:#f07d31;
+ text-shadow:none
+}
+.datepicker table tr td span.active:focus,
+.datepicker table tr td span.active.focus,
+.datepicker table tr td span.active:hover:focus,
+.datepicker table tr td span.active:hover.focus,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.disabled:hover.focus {
+ color:#fff;
+ background-color:#de6210;
+ border-color:#97430b
+}
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover {
+ color:#fff;
+ background-color:#de6210;
+ border-color:#d45e0f
+}
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active.active,
+.open>.datepicker table tr td span.active.dropdown-toggle,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active:hover.active,
+.open>.datepicker table tr td span.active:hover.dropdown-toggle,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled.active,
+.open>.datepicker table tr td span.active.disabled.dropdown-toggle,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open>.datepicker table tr td span.active.disabled:hover.dropdown-toggle {
+ color:#fff;
+ background-color:#de6210;
+ border-color:#d45e0f
+}
+.datepicker table tr td span.active:active:hover,
+.datepicker table tr td span.active:active:focus,
+.datepicker table tr td span.active:active.focus,
+.datepicker table tr td span.active.active:hover,
+.datepicker table tr td span.active.active:focus,
+.datepicker table tr td span.active.active.focus,
+.open>.datepicker table tr td span.active.dropdown-toggle:hover,
+.open>.datepicker table tr td span.active.dropdown-toggle:focus,
+.open>.datepicker table tr td span.active.dropdown-toggle.focus,
+.datepicker table tr td span.active:hover:active:hover,
+.datepicker table tr td span.active:hover:active:focus,
+.datepicker table tr td span.active:hover:active.focus,
+.datepicker table tr td span.active:hover.active:hover,
+.datepicker table tr td span.active:hover.active:focus,
+.datepicker table tr td span.active:hover.active.focus,
+.open>.datepicker table tr td span.active:hover.dropdown-toggle:hover,
+.open>.datepicker table tr td span.active:hover.dropdown-toggle:focus,
+.open>.datepicker table tr td span.active:hover.dropdown-toggle.focus,
+.datepicker table tr td span.active.disabled:active:hover,
+.datepicker table tr td span.active.disabled:active:focus,
+.datepicker table tr td span.active.disabled:active.focus,
+.datepicker table tr td span.active.disabled.active:hover,
+.datepicker table tr td span.active.disabled.active:focus,
+.datepicker table tr td span.active.disabled.active.focus,
+.open>.datepicker table tr td span.active.disabled.dropdown-toggle:hover,
+.open>.datepicker table tr td span.active.disabled.dropdown-toggle:focus,
+.open>.datepicker table tr td span.active.disabled.dropdown-toggle.focus,
+.datepicker table tr td span.active.disabled:hover:active:hover,
+.datepicker table tr td span.active.disabled:hover:active:focus,
+.datepicker table tr td span.active.disabled:hover:active.focus,
+.datepicker table tr td span.active.disabled:hover.active:hover,
+.datepicker table tr td span.active.disabled:hover.active:focus,
+.datepicker table tr td span.active.disabled:hover.active.focus,
+.open>.datepicker table tr td span.active.disabled:hover.dropdown-toggle:hover,
+.open>.datepicker table tr td span.active.disabled:hover.dropdown-toggle:focus,
+.open>.datepicker table tr td span.active.disabled:hover.dropdown-toggle.focus {
+ color:#fff;
+ background-color:#bd530e;
+ border-color:#97430b
+}
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active.active,
+.open>.datepicker table tr td span.active.dropdown-toggle,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active:hover.active,
+.open>.datepicker table tr td span.active:hover.dropdown-toggle,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled.active,
+.open>.datepicker table tr td span.active.disabled.dropdown-toggle,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open>.datepicker table tr td span.active.disabled:hover.dropdown-toggle {
+ background-image:none
+}
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active[disabled]:hover,
+.datepicker table tr td span.active[disabled]:focus,
+.datepicker table tr td span.active[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active:hover,
+fieldset[disabled] .datepicker table tr td span.active:focus,
+fieldset[disabled] .datepicker table tr td span.active.focus,
+.datepicker table tr td span.active:hover.disabled:hover,
+.datepicker table tr td span.active:hover.disabled:focus,
+.datepicker table tr td span.active:hover.disabled.focus,
+.datepicker table tr td span.active:hover[disabled]:hover,
+.datepicker table tr td span.active:hover[disabled]:focus,
+.datepicker table tr td span.active:hover[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active:hover:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover:focus,
+fieldset[disabled] .datepicker table tr td span.active:hover.focus,
+.datepicker table tr td span.active.disabled.disabled:hover,
+.datepicker table tr td span.active.disabled.disabled:focus,
+.datepicker table tr td span.active.disabled.disabled.focus,
+.datepicker table tr td span.active.disabled[disabled]:hover,
+.datepicker table tr td span.active.disabled[disabled]:focus,
+.datepicker table tr td span.active.disabled[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.disabled:hover,
+.datepicker table tr td span.active.disabled:hover.disabled:focus,
+.datepicker table tr td span.active.disabled:hover.disabled.focus,
+.datepicker table tr td span.active.disabled:hover[disabled]:hover,
+.datepicker table tr td span.active.disabled:hover[disabled]:focus,
+.datepicker table tr td span.active.disabled:hover[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
+ background-color:#f07d31;
+ border-color:#f07d31
+}
+.datepicker table tr td span.active .badge,
+.datepicker table tr td span.active:hover .badge,
+.datepicker table tr td span.active.disabled .badge,
+.datepicker table tr td span.active.disabled:hover .badge {
+ color:#f07d31;
+ background-color:#fff
+}
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+ color:#777
+}
+.datepicker .datepicker-switch {
+ width:145px
+}
+.datepicker .datepicker-switch,
+.datepicker .prev,
+.datepicker .next,
+.datepicker tfoot tr th {
+ cursor:pointer
+}
+.datepicker .datepicker-switch:hover,
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
+ background:#eee
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    
+    .ct-widget__container {
+        width: 458px;
+    }
+    .widget-header {
+        display: none;
+    }
+    .topbanner .name{
+        max-width: calc(100% - 470px);
+        font-size: 18px;
+        line-height: 1.8;
+    }
+}
+
+/* booking widget new - END */

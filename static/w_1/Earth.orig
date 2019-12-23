@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Earth - Wikitravel</title>
+<script type="3eed68c32e3ec59eace76079-text/javascript">document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script type="3eed68c32e3ec59eace76079-text/javascript">(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Earth","wgTitle":"Earth","wgCurRevisionId":2508008,"wgRevisionId":2508008,"wgArticleId":8651,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Has custom banner","Joke articles"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Earth","wgRelevantArticleId":8651,"wgRequestId":"XfyJkLjdP4VvlENuULVOSAAAAB8","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"],"wgWikiEditorEnabledModules":{"toolbar":true,"preview":true,"publish":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":false,"nearby":false,"watchlist":false,"tagline":false},"wgMediaViewerOnClick":false,"wgMediaViewerEnabledByDefault":false});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1kynwwm",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mmv.head","mmv.bootstrap.autostart","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/wiki/en/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/wiki/en/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector" type="3eed68c32e3ec59eace76079-text/javascript"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/wiki/en/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.30.0"/>
+<meta name="description" content="Earth (literally, &amp;quot;dirt&amp;quot;) is the third planet in the Sol system, about 4.3 lightyears from Alpha Centauri. Without significant orbital recreation systems or magma baths, this planet with its pre-warp-drive civilization may not seem to be worth a stop for refueling. But there&#039;s more to Earth than meets the eyes, and if you give it a chance, you may find something here that catches your interest. If you do, be sure to tell us."/>
+<link title="RDF Metadata" type="application/rdf+xml" href="/wiki/en/index.php?title=Special:Rdf&amp;target=Earth" rel="meta"/>
+<link rel="stylesheet" href="https://wikitravel.org/mw/skins/../extensions/Listing/listing.css"/>
+<link rel="alternate" type="application/rss+xml" title="Wikitravel News" href="https://wikitravel.org/rss/english.rss"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/en/opensearch_desc.php" title="Wikitravel (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wikitravel.org/wiki/en/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"/>
+<meta name="keywords" content="wikitravel,wiki,travel,tourism,travel guide,hotels,restaurants,nightlife,things to do,Earth,World" />
+<script type="3eed68c32e3ec59eace76079-text/javascript" src="https://wikitravel.org/mw/skins/common/wikitravel.js"></script>
+<script type="3eed68c32e3ec59eace76079-text/javascript" src="https://wikitravel.org/mw/skins/common/ct-widget.js"></script>
+<link rel="stylesheet" href="https://wikitravel.org/mw/skins/common/commonContent.css" />
+<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+<link rel="stylesheet" href="https://wikitravel.org/mw/skins/common/bootstrap.min.css" />
+<link rel="stylesheet" href="https://wikitravel.org/mw/skins/common/bootstrap-datepicker3.css" />
+<script type="3eed68c32e3ec59eace76079-text/javascript" src="//gdpr.internetbrands.com/v1/ibeugdpr.min.js"></script>
+<script type="3eed68c32e3ec59eace76079-text/javascript" src="https://wikitravel.org/gdpr/wtgdpr.js"></script>
+
+	<script type="3eed68c32e3ec59eace76079-text/javascript" charset="UTF-8" src="//static.clicktripz.com/custom/wikitravel/cti_wikitravel.js" async></script><script class="kxct" data-id="sh2cvqvfc" data-timing="async" data-version="3.0" type="3eed68c32e3ec59eace76079-text/javascript"> 
+window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]); 
+(function(){ 
+var k=document.createElement('script');k.type='text/javascript';k.async=true; 
+k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/sh2clsjtt.js'; 
+var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s); 
+}()); 
+</script>
+<script class="kxint" data-namespace="internetbrands" type="3eed68c32e3ec59eace76079-text/javascript">
+window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+(function(){
+  function retrieve(n){
+    var k= 'kx'+'internetbrands_'+n, ls=(function(){
+      try {
+        return window.localStorage;
+      } catch(e) {
+        return null;
+      }
+    })();
+    if (ls) {
+        return ls[k] || '';
+    } else if (navigator.cookieEnabled) {
+        var m = document.cookie.match(k+'=([^;]*)');
+        return (m && unescape(m[1])) || '';
+    } else {
+        return '';
+    }
+  }
+  Krux.user = retrieve('user');
+  Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+})();
+</script>
+<script type="3eed68c32e3ec59eace76079-text/javascript">
+Krux('ns:internetbrands', 'consent:set', {
+  dc: true,
+  al: true,
+  tg: true,
+  cd: true,
+  sh: true,
+  re: true
+}, function(errors, body) {
+  if (errors) {
+    console.error(errors);
+  } else {
+    console.log('Successfully set consent flags.');
+  }
+});
+</script>
+<script async src='//js-sec.indexww.com/ht/p/184397-111440337996447.js' type="3eed68c32e3ec59eace76079-text/javascript"></script>
+	<script type="3eed68c32e3ec59eace76079-text/javascript">
+            var gptadslots=[];
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            (function(){ var gads = document.createElement('script');
+                    gads.async = true; gads.type = 'text/javascript';
+                    var useSSL = 'https:' == document.location.protocol;
+                    gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+                    var node = document.getElementsByTagName('script')[0];
+                    node.parentNode.insertBefore(gads, node);
+            })();
+        </script>
+
+        <script type="3eed68c32e3ec59eace76079-text/javascript">
+                googletag.cmd.push(function() {
+
+                        //Adslot 1 declaration
+                        gptadslots[1]= googletag.defineSlot('/2922/wikitrav/728x90_top', [[728,90]],'div-gpt-ad-955451197880545870-1').setTargeting('kw',['top']).setTargeting('category',['Earth']).addService(googletag.pubads());
+
+                        //Adslot 2 declaration
+                        gptadslots[2]= googletag.defineSlot('/2922/wikitrav/160x600_top', [[160,600]],'div-gpt-ad-955451197880545870-2').setTargeting('kw',['top']).setTargeting('category',['Earth']).addService(googletag.pubads());
+
+                        //Adslot 4 declaration
+                        gptadslots[4]= googletag.defineSlot('/2922/wikitrav/160x600_bottom', [[160,600]],'div-gpt-ad-955451197880545870-4').setTargeting('kw',['bottom']).setTargeting('category',['Earth']).addService(googletag.pubads());
+
+                        //Adslot 5 declaration
+                        gptadslots[5]= googletag.defineSlot('/2922/wikitrav/160x600_last', [[160,600]],'div-gpt-ad-955451197880545870-5').setTargeting('kw',['last']).setTargeting('category',['Earth']).addService(googletag.pubads());
+                        
+                        googletag.pubads().setTargeting('category',['Earth']).setTargeting('kgs', Krux.segments).setTargeting('kuid', Krux.user);
+			googletag.pubads().setTargeting('ksg', Krux.segments).setTargeting('kuid', Krux.user);
+                        googletag.pubads().enableAsyncRendering();
+                        googletag.pubads().disableInitialLoad();
+                        googletag.enableServices();
+                });
+        
+		!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+	
+			apstag.init({
+				pubID: '3113',
+				adServer: 'googletag',
+				simplerGPT: true
+			});
+			
+			googletag.cmd.push(function() {
+                            apstag.fetchBids({ 
+                                timeout: 2e3
+                            }, function(bids) {
+                                // trigger the first request to DFP
+                                try {
+                                    apstag.setDisplayBids();
+                                    googletag.pubads().refresh();
+                                } catch (e) { /*ignore*/ }
+                            });
+                        });
+                        
+           // Start: Krux Data
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                destination: 'Earth',
+                region: 'Earth',
+                tags: ['travel', 'leisure']
+            });
+            // End: Krux Data
+		</script>
+
+<script type="3eed68c32e3ec59eace76079-text/javascript">var bIsMainPage = false, sLang = 'en';</script>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Earth rootpage-Earth skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice" class="mw-body-content"><div id="localNotice" lang="en" dir="ltr"><div class="mw-parser-output"><div align="center" style="padding-top: 3px; font-size:18px"><i><b>YOU CAN EDIT THIS PAGE! Just click any blue "Edit" link and start writing!</b></i></div>
+</div></div></div>
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Earth</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From Wikitravel</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div align='center' id='central_ad'>
+                        <div id='div-gpt-ad-955451197880545870-1'>
+                        <script type="3eed68c32e3ec59eace76079-text/javascript">
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-955451197880545870-1'); });
+                        </script>
+                    </div></div><table width='100%'><tr><td valign='top'><div class="mw-parser-output"><div class="noprint">
+<div id="mf-pagebanner" style="position:relative;">
+<div class="topbanner">
+<div class="name">Earth</div>
+<div class="topbanner-wrapper">
+<div class="ct-widget&#95;_container">
+<div id="ctWidget" class="ct-sidebar ct-sidebar--hotel">
+<div class="ct-widget&#95;_widget">
+<div class="ct-widget&#95;_body"></div>
+</div>
+</div>
+</div>
+</div>
+<p><a href="/en/File:Earth_Banner.jpg" class="image"><img alt="Earth Banner.jpg" src="https://wikitravel.org/upload/shared//9/9a/Earth_Banner.jpg" width="1800" height="450" data-file-width="1800" data-file-height="450" /></a>
+</p>
+</div>
+<div class="topbanner-toc">
+<div class="hlist tocbox-b"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Regions"><span class="tocnumber">1</span> <span class="toctext">Regions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Cities"><span class="tocnumber">2</span> <span class="toctext">Cities</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Other_destinations"><span class="tocnumber">3</span> <span class="toctext">Other destinations</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Understand"><span class="tocnumber">4</span> <span class="toctext">Understand</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#History"><span class="tocnumber">4.1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Landscape"><span class="tocnumber">4.2</span> <span class="toctext">Landscape</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Flora_and_fauna"><span class="tocnumber">4.3</span> <span class="toctext">Flora and fauna</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Climate"><span class="tocnumber">4.4</span> <span class="toctext">Climate</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Get_in"><span class="tocnumber">5</span> <span class="toctext">Get in</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Get_around"><span class="tocnumber">6</span> <span class="toctext">Get around</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Talk"><span class="tocnumber">7</span> <span class="toctext">Talk</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Buy"><span class="tocnumber">8</span> <span class="toctext">Buy</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Eat"><span class="tocnumber">9</span> <span class="toctext">Eat</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Drink"><span class="tocnumber">10</span> <span class="toctext">Drink</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Sleep"><span class="tocnumber">11</span> <span class="toctext">Sleep</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Learn"><span class="tocnumber">12</span> <span class="toctext">Learn</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Work"><span class="tocnumber">13</span> <span class="toctext">Work</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Stay_safe"><span class="tocnumber">14</span> <span class="toctext">Stay safe</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Stay_healthy"><span class="tocnumber">15</span> <span class="toctext">Stay healthy</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Respect"><span class="tocnumber">16</span> <span class="toctext">Respect</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Contact"><span class="tocnumber">17</span> <span class="toctext">Contact</span></a></li>
+</ul>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+</div>
+</div>
+<div id="moved_title">  </div>
+<table width="50%" bgcolor="white" align="center" style="border-style:double;border-width:1mm;border-color:lightblue">
+<tr>
+<td><i>This was an April Fool's Day <b><a href="/en/Wikitravel:Joke_articles" title="Wikitravel:Joke articles"> joke</a></b> article.  We amused ourselves tremendously in making it. Please refrain from dragging out the silliness and <a href="/en/Wikitravel:Plunge_forward" title="Wikitravel:Plunge forward">plunge forward</a> on some real articles!</i>
+</td></tr></table>
+<div id="quickbar" style="float: right; margin: 0 0 1em 1em">
+<table cellpadding="2" cellspacing="0" style="border: 1px solid #9866FF; font-size:85%; background-color: #f3f3ff" width="250">
+
+<tr>
+<td colspan="2" style="text-align: center; padding: 2px"> <a href="/en/File:599px-The_Earth_seen_from_Apollo_17.jpg" class="image" title="Earth"><img alt="Earth" src="https://wikitravel.org/upload/shared//thumb/3/3c/599px-The_Earth_seen_from_Apollo_17.jpg/250px-599px-The_Earth_seen_from_Apollo_17.jpg" width="250" height="250" srcset="https://wikitravel.org/upload/shared//thumb/3/3c/599px-The_Earth_seen_from_Apollo_17.jpg/375px-599px-The_Earth_seen_from_Apollo_17.jpg 1.5x, https://wikitravel.org/upload/shared//thumb/3/3c/599px-The_Earth_seen_from_Apollo_17.jpg/500px-599px-The_Earth_seen_from_Apollo_17.jpg 2x" data-file-width="599" data-file-height="599" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #C9AFFF; border-top: 1px solid #C9AFFF; background-color: #ddddff"> <b>Location</b>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; padding: 2px"> <a href="/en/File:800px-Solar_sys.jpg" class="image"><img alt="800px-Solar sys.jpg" src="https://wikitravel.org/upload/shared//thumb/2/23/800px-Solar_sys.jpg/250px-800px-Solar_sys.jpg" width="250" height="157" srcset="https://wikitravel.org/upload/shared//thumb/2/23/800px-Solar_sys.jpg/375px-800px-Solar_sys.jpg 1.5x, https://wikitravel.org/upload/shared//thumb/2/23/800px-Solar_sys.jpg/500px-800px-Solar_sys.jpg 2x" data-file-width="800" data-file-height="502" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #C9AFFF; border-top: 1px solid #C9AFFF; background-color: #ddddff"> <b>Flag</b>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; padding: 2px"> <a href="/en/File:800px-Flag_of_the_United_Nations.svg.png" class="image"><img alt="800px-Flag of the United Nations.svg.png" src="https://wikitravel.org/upload/shared//thumb/1/18/800px-Flag_of_the_United_Nations.svg.png/108px-800px-Flag_of_the_United_Nations.svg.png" width="108" height="72" srcset="https://wikitravel.org/upload/shared//thumb/1/18/800px-Flag_of_the_United_Nations.svg.png/162px-800px-Flag_of_the_United_Nations.svg.png 1.5x, https://wikitravel.org/upload/shared//thumb/1/18/800px-Flag_of_the_United_Nations.svg.png/216px-800px-Flag_of_the_United_Nations.svg.png 2x" data-file-width="800" data-file-height="533" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; border-bottom: 1px solid #C9AFFF; border-top: 1px solid #C9AFFF; background-color: #ddddff"> <b>Quick Facts</b>
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Capital</b>
+</td>
+<td> <a href="/en/New_York_City" title="New York City">New York City</a>
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Government</b>
+</td>
+<td> Primitive hierarchical
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Currency</b>
+</td>
+<td> Dried cellulose pulp, minted pieces of metal
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Area</b>
+</td>
+<td> <i>total:</i> 510,065,600 km<sup>2</sup><br /><i>land:</i> 148,939,100 km<sup>2</sup><br /><i>water:</i> 361,126,400 km<sup>2</sup>
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Population</b>
+</td>
+<td> 6,600,000,000 (March 2006 est.)
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Language</b>
+</td>
+<td> Earthlingish meat-flapping
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Religion</b>
+</td>
+<td> Usually
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b><a href="/en/Electrical_systems" title="Electrical systems">Electricity</a></b>
+</td>
+<td> Non-fusion based
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b><a href="/en/List_of_country_calling_codes" title="List of country calling codes">Country code</a></b>
+</td>
+<td> +222
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b>Internet TLD</b>
+</td>
+<td> .un
+</td></tr>
+<tr>
+<td valign="top" style="padding-left:5px; padding-right:5px; white-space:nowrap;"> <b><a href="/en/Time_zones" title="Time zones">Time Zone</a></b>
+</td>
+<td> GTC-61x10<sup>37</sup>
+</td></tr>
+<tr>
+<td colspan="2" style="height:1px;">
+</td></tr></table>
+</div> 
+<p><b>Earth</b> (literally, "dirt") is the third planet in the Sol system, about 4.3 lightyears from Alpha Centauri. Without significant orbital recreation systems or magma baths, this planet with its pre-warp-drive civilization may not seem to be worth a stop for refueling. But there's more to Earth than meets the eyes, and if you give it a chance, you may find something here that catches your interest. If you do, be sure to tell us.
+</p>
+<h2><span class="mw-headline" id="Regions">Regions</span></h2>
+<ul><li> <a href="/en/Antarctica" title="Antarctica">Antarctica</a> -- an icy wasteland only slightly warmer than interstellar space, unspoiled by locals</li>
+<li> <a href="/en/Africa" title="Africa">Africa</a> -- oldest populated continent, with the most large land species</li>
+<li> <a href="/en/Asia" title="Asia">Asia</a> -- a huge mess of wide open spaces and tightly-packed cities</li>
+<li> <a href="/en/Australia" title="Australia">Australia</a> -- former Denebian penal colony, whose descendants include the platypus, koala, and kangaroo</li>
+<li> <a href="/en/Europe" title="Europe">Europe</a> -- cramped and crowded, not much of interest</li>
+<li> <a href="/en/North_America" title="North America">North America</a> -- richest source of atmospheric CO<sub>2</sub>, great for vegetative travelers</li>
+<li> <a href="/en/South_America" title="South America">South America</a> -- fastest-rising major mountain range</li>
+<li> <a href="/en/Oceania" title="Oceania">Oceans</a> -- home to most of the intelligent life</li>
+<li> <a href="/en/Heaven" class="mw-redirect" title="Heaven">Heaven</a> -- mostly full of birds and other winged creatures</li>
+<li> <a href="/en/Hell_(Hades)" title="Hell (Hades)">Hell</a> -- Worth a visit to see what the planet will look like after 50 years of Global Warming.</li></ul>
+<h2><span class="mw-headline" id="Cities">Cities</span></h2>
+<p>This sector of the galaxy lacks any major nebula-based or multi-planet metropolis, but there are some quaint villages on Earth that can provide basic amenities for the weary traveler.
+</p>
+<ul><li> <a href="/en/New_York_City" title="New York City">New York City</a> -- world headquarters of the nascent and dysfunctional planetary government</li>
+<li> <a href="/en/London" title="London">London</a> -- some good beers can be found here</li>
+<li> <a href="/en/Paris" title="Paris">Paris</a> -- locals flock for the tacky folk-art and the single (non-operational) zeppelin docking tower</li>
+<li> <a href="/en/Johannesburg" title="Johannesburg">Johannesburg</a> -- largest city near <a href="/en/Antarctica" title="Antarctica">Antarctica</a>; good for picking up groceries</li>
+<li> <a href="/en/Roswell_(New_Mexico)" title="Roswell (New Mexico)">Roswell</a> -- if you must approach the surface, try this rather-pleasant area of desert.</li></ul>
+<h2><span class="mw-headline" id="Other_destinations">Other destinations</span></h2>
+<p>Earth's metropolitan areas are unbearably dreary and provincial, but you can find some fun in the rural sectors of the planet.
+</p>
+<ul><li> <a href="/en/Grand_Canyon" title="Grand Canyon">Grand Canyon</a> -- excellent for pod-racing</li>
+<li> <a href="/wiki/en/index.php?title=Bermuda_Triangle&amp;action=edit&amp;redlink=1" class="new" title="Bermuda Triangle (page does not exist)">Bermuda Triangle</a> -- fishing, hurricanes, freighter abduction</li>
+<li> <a href="/en/Iceland" title="Iceland">Iceland</a> -- tasty fresh hot sulfur springs</li>
+<li> <a href="/en/Lake_Baikal" title="Lake Baikal">Lake Baikal</a> -- invigorating spot for a cold swim, and for the adventurous, there's a thriving sturgeon brothel</li>
+<li> <a href="/en/Luna" class="mw-redirect" title="Luna">Luna</a> -- the smaller partner of this dual-planet system is ideal for golf</li>
+<li> <a href="/en/California" title="California">California</a> - home of the last surviving California Raisin, the Governator, and the <a href="/en/Disneyland" title="Disneyland">Gates to Hell</a>, just off the I-5 in Aneheim.</li></ul>
+<h2><span class="mw-headline" id="Understand">Understand</span></h2>
+<h3><span class="mw-headline" id="History">History</span></h3>
+<p>Belched as a cloud of particles from the core of its central star, <b>Sol</b>, sometime about 4 billion years ago, the Earth coalesced into a roughly sphere-shaped lump soon afterwards (relatively speaking). A thin layer of <b>goo</b> formed on its outer crust about 1 billion years ago, and that goo jiggles and sloshes around every once in a while. There have been some awesome meteor collisions, especially in the areas of <a href="/en/Yucatan" class="mw-redirect" title="Yucatan">Yucatan</a> and <a href="/wiki/en/index.php?title=Tugunska&amp;action=edit&amp;redlink=1" class="new" title="Tugunska (page does not exist)">Tugunska</a>, and the polar areas have formed nifty frost patterns if you look closely enough. Other than that, not much has happened on Earth except the <a href="https://en.wikipedia.org/wiki/Cincinnati_Bengals" class="extiw" title="wikipedia:Cincinnati Bengals">Cincinnati Bengals</a> going to the playoffs in 2005.
+</p>
+<h3><span class="mw-headline" id="Landscape">Landscape</span></h3>
+<p>70.8% of the Earth's surface is covered by a noxious solution of dihydrogen monoxide and sodium chloride.  The rest is largely silicate, with occasional ferrous deposits.
+</p>
+<h3><span class="mw-headline" id="Flora_and_fauna">Flora and fauna</span></h3>
+<p>Earth is inhabited by <b>Earthlings</b>, which come in various shapes and sizes.  While simple arachnids are present in fairly large numbers, especially in cheaper lodging establishments, the formation of a proper, civilized Hive mind has been inhibited by a hard core that prevents burrowing to suitable depths.  Instead, the dominant type of Earthling appears to be a hairless bipedal sack of protoplasm known as a <b>Homo</b>, which has recently invented the digital wristwatch and primitive computing tools with speeds at a paltry ~3-4Ghz.
+</p>
+<h3><span class="mw-headline" id="Climate">Climate</span></h3>
+<p>Earth has an unstable oxygen-rich atmosphere that would produce widespread combustion if not for the annoyingly frequent precipitation of dihydrogen monoxide in its liquid and solid forms.  Temperatures generally vary between 223-323&#176;K.  You may hear of rumors of "global warming", but this is simply a myth to scare off monsters from far off galaxies, who tend to emigrate to colder locales.  Compared to its nearest planetary neighbor Venus, Earth is quite cool.
+</p>
+<h2><span class="mw-headline" id="Get_in">Get in</span></h2>
+<p>There are no regularly scheduled spaceship services to Earth, as the Vogons have yet to complete construction of the new hyperspace bypass that would make access easier.  Hitchhikers have occasionally been successful, although getting a ride back can be exceedingly time-consuming.
+</p><p>If you charter a spaceship, be aware that decent landing facilities are woefully absent and the natives are afraid of flying saucers.  Orbital stations are amazingly primitive and do not have modern docking facilities.  <a href="/en/Area_51" class="mw-redirect" title="Area 51">Area 51</a> is widely considered the best option for cheap parking.
+</p>
+<h2><span class="mw-headline" id="Get_around">Get around</span></h2>
+<p>Local transportation relies mostly on the combustion of fossil fuels and is grotesquely unsafe and slow, with speeds rarely exceeding 0.002 lightseconds/hour. Earthlings have a primitive taboo about tunneling directly through the planet to other locations, and tend to take the long way around following the surface instead. Consequently, travel times can can be considerably longer.
+</p><p>Jet packs, quantum disappearance drives, and ultranic hyperspace fizzout devices remain undiscovered by Earth's primitive technological priest-caste. Strangely enough, use of these tools will <i>not</i> be greeted with curiosity, but with hostility and fear. It may be difficult to employ them with Earthlings about.
+</p>
+<h2><span class="mw-headline" id="Talk">Talk</span></h2>
+<p>Amazingly, most Earthlings can only communicate by <b>pushing air through flaps of meat</b>, producing series of vaguely musical squeaks and burbles.  Utilization of <b>radio</b> for communication is limited to broadcasting political propaganda and mating songs.  However, rudimentary digital conversation is possible anonymously over the <b>Intarweb</b>, accessible at 2.4-2.5 GHz near <b>St. Arbucks</b> outlets.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/en/File:Dolphin_Encounter-9563.jpg" class="image"><img alt="" src="https://wikitravel.org/upload/shared//thumb/a/a9/Dolphin_Encounter-9563.jpg/300px-Dolphin_Encounter-9563.jpg" width="300" height="225" class="thumbimage" srcset="https://wikitravel.org/upload/shared//thumb/a/a9/Dolphin_Encounter-9563.jpg/450px-Dolphin_Encounter-9563.jpg 1.5x, https://wikitravel.org/upload/shared//thumb/a/a9/Dolphin_Encounter-9563.jpg/600px-Dolphin_Encounter-9563.jpg 2x" data-file-width="2304" data-file-height="1728" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/en/File:Dolphin_Encounter-9563.jpg" class="internal" title="Enlarge"></a></div>Earth's best conversationalists</div></div></div>
+<p>Earth's waterbound <b>delphine</b> population, on the other <strike>hand</strike> flipper, uses a charming series of beeps, clicks, whistles and multi-band telepathy to communicate. Delphine is a pleasant language that can be picked up quite easily by the experienced traveler. Be forewarned that dolphins primarily use their powerful communications skills to tell dirty jokes and to scam their way into cool nightclubs.
+</p>
+<h2><span class="mw-headline" id="Buy">Buy</span></h2>
+<p>There are few objects of interest on Earth, although some visitors have found that <i>Homos</i> make amusing pets.  (Ruminants of genus <i>Bos</i> are also quaint, but more difficult to care for.)  Try to select your specimens in isolated areas, such as farming communities, to minimize unwanted attention.  Turning on your spaceship lights at full blast will usually make them freeze long enough to be captured.  Once on-board, be sure to give the <i>Homo</i> a thorough medical examination to ensure it's free of vermin, and if found infested, just drop it off where you took it.  Species of the genus <i>Heteros</i> breed at an alarming rate (the process is <i>not</i> pretty), so be careful not to pick up a mating pair of them.
+</p>
+<h2><span class="mw-headline" id="Eat">Eat</span></h2>
+<p>Earthlings are an acquired taste; most find them overly chewy and hairy.  Wikitravelers, especially Wikitravel administrators, taste horribly grotesque and bitter beyond belief.  It's best to avoid eating any Wikitraveler.  Try the fish tacos instead, or a nice tossed salad.
+</p>
+<h2><span class="mw-headline" id="Drink">Drink</span></h2>
+<p>It appears that dihydrogen monoxide is a required liquid to sustain the existence of the semi-intelligent life forms that inhabit the planet.  Although commonly available in juice-bearing fruits, many Earthlings instead add bubbles and mix high fructose corn syrup with it before serving.  Various forms of fermented plant product (known locally as &quot;beer&quot;, &quot;whiskey&quot; or &quot;the sauce&quot;) are also consumed in great quantities.  These liquids appear to serve an important purpose in the life of the Earthling male, who will frequently buy them for the females as part of the species' bizarre mating ritual.
+</p>
+<h2><span class="mw-headline" id="Sleep">Sleep</span></h2>
+<p>One place that Earth falls down on the hospitality scale is in sleeping accommodations. Almost all hotels are tailored specifically for the needs of beings the size and shape of the typical Earthling (18 standard units high, or 2 local "meters"). Typical galactic customizations that could be handled in even the most basic of civilized planets (a bed longer than 300 meters, a bed of molten lava, a comfy prism for intelligent shades of the color blue) will elicit only dumb, moist stares from the local hospitality industry. Only beings between, say, 1/4 to double the size of an average human, and that can tolerate liquid-water temperatures, will find professional lodging of any kind.
+</p><p>Of course, there are ample opportunities for sleeping <i>al fresco</i>. <b>Camping</b> on Earth can be highly rewarding, especially if you can find a section of the planet sufficiently remote to go mostly undetected. The locals are easily frightened, however, so avoid any serious modifications of the environment (boring holes into the planet's crust; igniting whole ecosystems; consuming all atmospheric nitrogen). Remember the galactic campers' code: <i>take only cow entrails, leave only crop circles.</i>
+</p>
+<h2><span class="mw-headline" id="Learn">Learn</span></h2>
+<p>Although the planet boasts countless cosmetology schools, none of them are accredited by any galactic boards and their credits will almost assuredly fail to transfer to degree-granting institutions in your quadrant. Don't be fooled by the names of Har-Vard University and Ox-Ford University; these appear to have no relationship with the famous and prestigious Har-Fart University and Ox-Fart University on Neptune. Earth has no other educational opportunities to speak of.
+</p>
+<h2><span class="mw-headline" id="Work">Work</span></h2>
+<p>Earth offers few of the work opportunities found in other systems - the need for hyper-drive repair technicians is unknown, galactic refueling operations are non-existent, and crop-art is frowned upon by the locals and unlikely to generate significant patronage.  However, for those willing to assume a visage that resembles that of an Earthling some interesting options exist.  <a href="/en/Hollywood" title="Hollywood">Hollywood</a> currently employs numerous non-Earthlings in positions within the entertainment industry, including Keith Richards, Prince, and Robert Downey, Jr.  Earthlings are also amused by the simplest of anatomical tricks, and the inter-galactic Cirque du Soleil troupe has found great success on the planet.  For those looking for quieter employment, the New York subway system is always seeking drivers, and the country of <a href="/en/France" title="France">France</a> offers unlimited opportunities.
+</p>
+<h2><span class="mw-headline" id="Stay_safe">Stay safe</span></h2>
+<p>Mostly harmless. The inhabitants of Earth have recently discovered the weaponry use of primitive fission- and fusion-based devices. Facilities for inter-planetary deployment of such devices remain lacking, and such devices are unlikely to penetrate the armor of spacecrafts conforming to Intergalactic Automotive Associations Standards 345IR-14. Carbon-based travelers should take note that deployment of such devices may cause some discomfort.
+</p>
+<h2><span class="mw-headline" id="Stay_healthy">Stay healthy</span></h2>
+<p>With proper precautions Earth is a generally safe place to visit.  The fatalities suffered by Martian visits to <a href="/en/England" title="England">England</a> in 1898 and <a href="/en/New_Jersey" title="New Jersey">New Jersey</a> in 1938 (naively referred to by Earthlings as the &quot;War of the Worlds&quot; and by Martians as &quot;The War of Earthling Aggression&quot;) are easily avoided with use of simple antihistamines.  Temperatures on Earth are almost universally lower than on other planets.  While these extreme temperatures provide unique opportunities - metals such as lead and tin can actually be seen in their solid form - proper clothing is vital to a pleasant stay on this planet.
+</p><p>Health facilities are completely useless on Earth.  Medical technology still utilizes such quaint devices as the tongue depressor (literally a wooden stick used for manipulating organs in the oral cavity) and rubber glove (which Earthing doctors use in unspeakable ways to treat the male of the species).  Adding insult to injury, the wait and paperwork required for even this rudimentary level of care is interminable.
+</p>
+<h2><span class="mw-headline" id="Respect">Respect</span></h2>
+<p>Hard as it may be to accept, Earthlings deserve our grudging respect as living, sentient creatures; our brothers from across the stars who may someday join the galactic community as equals and peers. We have so much to learn from each other.
+</p><p>Ha ha! <i>Gotcha</i>! You believed us there for a moment, didn't you? Seriously, you <i>do</i> want to be on your best behavior, as Earthlings are extremely <b>prickly, hidebound, unfun</b> creatures who freak out quite easily at anything they haven't seen before on cable TV. They can get <b>quite cheesed off</b> by pretty much anything you say, do, or radiate, and they get <b>stabby</b> and <b>shooty</b> whenever they're angry. So be careful.
+</p><p>Typical Earthling sore spots include: being proven wrong; consuming any of their close family members; reminding them that they still look an awful lot like monkeys; cool tricks with fusion, subspace, or really anything that shows how backward and remedial their own technology is; making any considerable holes in the planet itself; and the elimination of any native species, however small, inconsequential or squiggly.
+</p>
+<h2><span class="mw-headline" id="Contact">Contact</span></h2>
+<p><a href="/en/Arecibo" title="Arecibo">Arecibo</a> on the rocky outcrop of <a href="/en/Puerto_Rico" title="Puerto Rico">Puerto Rico</a> allows you to call home.  Alternatively, dial 1-800-CALL-ATT. And to the Earthlings, for future reference, YES we can hear you now...
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20191219154923
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.049 seconds
+Real time usage: 0.073 seconds
+Preprocessor visited node count: 354/1000000
+Preprocessor generated node count: 1880/1000000
+Post‐expand include size: 7592/3145728 bytes
+Template argument size: 1357/3145728 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   15.048      1 -total
+ 63.39%    9.539      1 Template:Quickbar
+ 20.15%    3.032     11 Template:Quickbar_item
+ 19.29%    2.902      1 Template:Pagebanner
+ 15.14%    2.278      1 Template:Joke
+  2.31%    0.347      1 Template:Quickbar_empty
+-->
+</div>
+<!-- Saved in parser cache with key wikitravel_org_en:pcache:idhash:8651-0!canonical and timestamp 20191219154923 and revision id 2508008
+ -->
+</td>
+		<td class="ads" id="adTableCell" valign="top">
+		<div id='div-gpt-ad-955451197880545870-2' style='margin-bottom: 15px;'>
+	<script type="3eed68c32e3ec59eace76079-text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-955451197880545870-2'); });
+	</script>
+    </div>
+
+	<div id='div-gpt-ad-955451197880545870-4' style='margin-bottom: 15px;'>
+	<script type="3eed68c32e3ec59eace76079-text/javascript">
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-955451197880545870-4'); });
+	</script>
+    </div>
+
+    <div id='div-gpt-ad-955451197880545870-5' style='position: sticky; position: -webkit-sticky; top: 40px;'>
+            <script type="3eed68c32e3ec59eace76079-text/javascript">
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-955451197880545870-5'); });
+            </script>
+    </div>
+		</td>
+	</tr></table></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://wikitravel.org/wiki/en/index.php?title=Earth&amp;oldid=2508008">https://wikitravel.org/wiki/en/index.php?title=Earth&amp;oldid=2508008</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/en/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/en/Category:Has_custom_banner" title="Category:Has custom banner">Has custom banner</a></li><li><a href="/en/Category:Joke_articles" title="Category:Joke articles">Joke articles</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/en/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/en/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/wiki/en/index.php?title=Special:CreateAccount&amp;returnto=Earth" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/wiki/en/index.php?title=Special:UserLogin&amp;returnto=Earth" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="/en/Earth" title="View the content page [c]" accesskey="c">Page</a></span></li>
+							<li id="ca-talk"><span><a href="/en/Talk:Earth" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="selected"><span><a href="/en/Earth">Read</a></span></li>
+							<li id="ca-viewsource"><span><a href="/wiki/en/index.php?title=Earth&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="/wiki/en/index.php?title=Earth&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/wiki/en/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikitravel" title="Search Wikitravel [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/en/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage"><a href="/en/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li><li id="n-projectpage"><a href="/en/Wikitravel:Project">Project Home</a></li><li id="n-Travellers.27-Pub"><a href="/en/Wikitravel:Travellers%27_pub">Travellers' Pub</a></li><li id="n-recentchanges"><a href="/en/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="/en/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="/en/Wikitravel:Help" title="The place to find out">Help</a></li><li id="n-Report-a-problem"><a href="https://wikitravel.org/shared/Report_a_problem" rel="nofollow" target="_blank">Report a problem</a></li><li id="n-Upload-a-picture"><a href="https://wikitravel.org/shared/Special:UploadWizard" rel="nofollow" target="_blank">Upload a picture</a></li><li id="n-Wikitravel-Shared"><a href="https://wikitravel.org/shared/Main_Page" rel="nofollow" target="_blank">Wikitravel Shared</a></li><li id="n-Contact-Wikitravel"><a href="https://wikitravel.org/en/Contact_Wikitravel" rel="nofollow" target="_blank">Contact Wikitravel</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-Feeds' aria-labelledby='p-Feeds-label'>
+			<h3 id='p-Feeds-label'>Feeds</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-newsfeedtitle"><a href="https://wikitravel.org/wiki/en/index.php?title=Travel_news&amp;feed=atom&amp;action=history" rel="nofollow" target="_blank">Travel news</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/en/Special:WhatLinksHere/Earth" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/en/Special:RecentChangesLinked/Earth" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/en/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki/en/index.php?title=Earth&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki/en/index.php?title=Earth&amp;oldid=2508008" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/wiki/en/index.php?title=Earth&amp;action=info" title="More information about this page">Page information</a></li><li id="t-ePub">
+<a href="/wiki/en/index.php?title=Special:EPubPrint&amp;page=Earth">Export as ePub</a></li>					</ul>
+							</div>
+		</div>
+					<div class="portal" role="navigation" id='p-othersites' aria-labelledby='p-othersites-label'>
+					<h3 id='p-othersites-label'>other sites</h3>
+
+					<div class="body">
+						<ul>
+							<li class="interlanguage-link interwiki-wikipedia"><a href="https://en.wikipedia.org/wiki/Earth" title="Earth – Wikipedia" lang="wikipedia" hreflang="wikipedia" class="interlanguage-link-target">Wikipedia</a></li>						</ul>
+					</div>
+				</div>
+						<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>In other languages</h3>
+
+			<div class="body">
+									<ul>
+											</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 26 October 2017, at 18:18.</li>
+											<li id="footer-info-copyright">Text is available under [http://wikitravel.org/shared/Copyleft Creative Commons Attribution-ShareAlike 3.0] images are available under [http://wikitravel.org/shared/How_to_re-use_Wikitravel_guides various licenses], see each image for details. This site is owned, operated, and maintained by MH Sub I, LLC dba Internet Brands. Copyright © 2018 MH Sub I, LLC dba Internet Brands.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/en/Wikitravel:Privacy_policy" title="Wikitravel:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/en/Wikitravel:About" title="Wikitravel:About">About Wikitravel</a></li>
+											<li id="footer-places-disclaimer"><a href="/en/Wikitravel:Terms_of_use" title="Wikitravel:Terms of use">Terms of use</a></li>
+											<li id="footer-places-mobileview"><a href="https://wikitravel.org/wiki/en/index.php?title=Earth&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"><img src="https://creativecommons.org/images/public/somerights.png" alt="Creative Commons Attribution-ShareAlike 3.0" width="88" height="31"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/" target="_blank"><img src="/wiki/en/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki/en/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki/en/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script type="3eed68c32e3ec59eace76079-text/javascript" src="https://wikitravel.org/mw/skins/../extensions/Listing/ListingEditor.js"></script><script type="3eed68c32e3ec59eace76079-text/javascript">
+<!--//
+messages= new cListingMessages({'tag-eat':'eat', 
+'tag-drink':'drink', 
+'tag-see':'see', 
+'tag-do':'do', 
+'tag-sleep':'sleep', 
+'tag-buy':'buy', 
+'tag-listing':'listing', 
+'tag-küche':'⧼listing-küche-taglabel⧽', 
+'tag-sehenswürdigkeiten':'⧼listing-sehenswürdigkeiten-taglabel⧽', 
+'tag-aktivitäten':'⧼listing-aktivitäten-taglabel⧽', 
+'tag-unterkunft':'⧼listing-unterkunft-taglabel⧽', 
+'tag-einkaufen':'⧼listing-einkaufen-taglabel⧽', 
+'attr-name':'name', 
+'attr-alt':'alt', 
+'attr-address':'address', 
+'attr-directions':'directions', 
+'attr-phone':'phone', 
+'attr-phoneextra':'phoneextra', 
+'attr-email':'email', 
+'attr-fax':'fax', 
+'attr-tollfree':'toll free', 
+'attr-url':'url', 
+'attr-hours':'hours', 
+'attr-checkin':'checkin', 
+'attr-checkout':'checkout', 
+'attr-hoursextra':'hoursextra', 
+'attr-price':'price', 
+'attr-priceextra':'priceextra', 
+'attr-geo':'geo', 
+'attr-lat':'lat', 
+'attr-long':'long', 
+'attr-tags':'tags', 
+'attr-description':'description', 
+'msg-save':'save', 
+'msg-saving':'Saving', 
+'msg-cancel':'cancel', 
+'msg-editor-title':'Add New Listing'});
+//-->
+</script><script type="3eed68c32e3ec59eace76079-text/javascript" src="https://wikitravel.org/mw/skins/../extensions/Listing/ajax.js"></script>
+<script type="3eed68c32e3ec59eace76079-text/javascript">(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.049","walltime":"0.073","ppvisitednodes":{"value":354,"limit":1000000},"ppgeneratednodes":{"value":1880,"limit":1000000},"postexpandincludesize":{"value":7592,"limit":3145728},"templateargumentsize":{"value":1357,"limit":3145728},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%   15.048      1 -total"," 63.39%    9.539      1 Template:Quickbar"," 20.15%    3.032     11 Template:Quickbar_item"," 19.29%    2.902      1 Template:Pagebanner"," 15.14%    2.278      1 Template:Joke","  2.31%    0.347      1 Template:Quickbar_empty"]},"cachereport":{"timestamp":"20191219154923","ttl":86400,"transientcontent":false}}});});</script><script type="3eed68c32e3ec59eace76079-text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-219634-5', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+<script type="3eed68c32e3ec59eace76079-text/javascript">(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":120});});</script>
+	<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="3eed68c32e3ec59eace76079-|49" defer=""></script></body>
+</html>

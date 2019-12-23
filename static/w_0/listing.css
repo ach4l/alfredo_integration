@@ -1,0 +1,210 @@
+
+/*
+  listing html proper
+*/
+.vcard .fn { font-weight: bold; }
+
+.vcard .nickname { font-style: italic; }
+
+.vcard .nickname .non-latin { font-style: normal; }
+
+.vcard .address-extra { font-style: italic; }
+
+.vcard .email { font-style: italic; }
+
+.vcard .note { font-style: italic; }
+
+/*
+  listing form styles
+*/
+.clear { clear:both }
+
+.listingform {
+    position:absolute;
+    z-index: 100;
+    display:block;
+    background-color:#E1E1FF;
+    border:1px #000164 solid;
+    width:600px;
+    margin:0px;
+    padding:0px;
+}
+
+.listingFormBody {
+    padding:10px;
+    padding-top:5px;
+}
+
+div.listingTitleBar {
+    width:594px;
+    padding-left:6px;
+    line-height:20px;
+    background-color: #000164;
+    color: #FFF;
+    border:none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#savingText {
+    color:#DC0000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left:20px;
+}
+
+div.form-edit-input {
+    padding-bottom:5px;
+    float: left;
+    margin-right: 0.5em
+}
+
+div.form-edit-input label {
+    font-weight:bold;
+    font-size: 10px;
+    position: relative;
+    top: -1px; 
+    margin-left:3px;
+}
+
+div.form-edit-input input,
+div.form-edit-input textarea { border: 1px solid #8A8A96; }
+
+div.form-edit-input textarea { width:580px; }
+
+.dismiss,
+a.form-edit-button {
+    border: 1px solid #000;
+    font-size: 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-decoration: none;
+    /*  color: #000; */
+    color: #FFF;
+    background-color: #000164;
+}
+
+a.form-edit-button:visited { color: #FFF }
+
+a.listing-edit {
+    color: #AAA;
+    text-decoration: none;
+    font-size: 10px
+}
+
+a.listing-edit:visited { color: #AAA }
+
+a.listing-edit:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+.error-message { color:#DC0000 }
+
+/*tag class specifics*/
+span.geo { display:none }
+
+/*for the geo form... I'd like to avoid a seperate stylesheet for that */
+
+#geoMap {
+    width:590px;
+    height:400px;
+    border: 1px solid #8A8A96;
+}
+
+.listingTitleBar {
+    width:100%;
+    height:20px;
+    border: 1px solid #8A8A96;
+}
+
+.geoMapMain {
+    position:absolute;
+    z-index: 200;
+    display:block;
+    background-color:#E1E1FF;
+    border:1px #000164 solid;
+    padding:10px;
+    width:600px;
+}
+
+.geoMapFormInput {
+    float: left;
+    margin-right: 0.5em
+}
+
+.geoMapFormInput label {
+    font-weight:bold;
+    font-size: 10px;
+    position: relative;
+    top: -1px
+}
+
+.geoMapFormInput { border: 1px solid #8A8A96; }
+
+.geoMapButton {
+    border: 1px solid #000;
+    font-size: 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #000164;
+    margin-left : 10px;
+}
+
+.geoMapButton:first-child { margin-left:0px; }
+
+.geoMapInputs { margin-top:4px; }
+
+.geoMapButtons { margin-top:4px; }
+
+
+
+/*Top Nav*/
+/*
+.topbanner { overflow:inherit !important; }
+
+.hlist .tocUl li { position:relative; }
+
+.hlist li .sub-menu {
+    display:none!important;
+    float:left;
+    left:0px;
+    top:100%;
+    position:absolute;
+    list-style: none;
+    margin: 0px 0px 0px -10px !important;
+    z-index: 4;
+    padding-left: 10px !important;
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
+    width: auto;
+    max-width: 275px;
+    min-width: 0px !important;
+}
+
+.hlist .sub-menu li {
+    float:left;
+    padding: 7px 10px;
+    position:relative;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+    margin: 0px -9px;
+    white-space: nowrap;
+    min-width: 0px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.hlist .sub-menu li:before,
+.hlist .sub-menu li:after {
+    content:"" !important;
+    padding:0;
+    margin:0;
+}
+
+.hlist .sub-menu li:hover { background:#000; }
+
+.hlist li:hover .sub-menu { display:block !important; }
+
+*/
