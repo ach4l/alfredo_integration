@@ -129,8 +129,11 @@ def transform_view():
         print('IP Address :')
         print(IPAddr) 
         for i in os.listdir(path):
-            files.append(i)        
-        full_path_array = ['http://' + IPAddr + ':5000/' + str(req_id) + '/' + s for s in files]
+            files.append(i) 
+
+        # Weirdly the following line is giving 127.0.0.1  as ip address for alfredo       
+        #full_path_array = ['http://' + IPAddr + ':5000/' + str(req_id) + '/' + s for s in files]
+        full_path_array = ['/' + str(req_id) + '/' + s for s in files]
         response_frontend = {}
         response_frontend['status'] = "OK"
         response_frontend['links'] = full_path_array
