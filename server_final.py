@@ -20,9 +20,6 @@ def root(path, reqid):
 # def send_js(path,reqid):
 #     return send_from_directory('results/'+reqid, path)
 
-
-
-
 @app.route("/")
 def hello():
     return render_template("main_page.html")
@@ -137,6 +134,7 @@ def transform_view():
         response_frontend = {}
         response_frontend['status'] = "OK"
         response_frontend['links'] = full_path_array
+        response_frontend['server_request_id'] = req_id
         
         # Add the server address (MAKE IT AGNOSTIC OF IP ADDRESS)
         return jsonify(response_frontend)
