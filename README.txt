@@ -34,14 +34,14 @@ Sample data:
 data = {'user_id': '1', 'req_id':"1", 'type':'wikitravel', 'mode': '0', 'query': 'Pushkar'}
 
 Post JSON to the following URL
-url = <ip.address>:<port>/request
+url = <ip.address>:<port>/add_request
 
 # Task 2 - Get the links to download all the files
 
 Sample data remains the same. Only url changes.
 
 Post JSON to the following URL
-url = <ip.address>:<port>/response
+url = <ip.address>:<port>/send_results
 
 Returns a json object (jsonify(files)) 
 
