@@ -100,8 +100,8 @@ def transform_view():
     user_id = str(req_data['user_id'])
 
     
-
-    req_id = str(req_data['server_request_id'])
+    req_id= str(req_data['server_request_id'])
+    req_id_original = str(req_data['server_request_id'])
     #req_id = user_id + '_'  + str(req_data['req_id'])
     if req_data['query'] == 'Valparaiso':
         req_id = 'w_0' 
@@ -114,7 +114,7 @@ def transform_view():
     print(UPLOAD_DIRECTORY)
     if not os.path.exists(UPLOAD_DIRECTORY):
         # Create response
-        message = {"server_request_id":req_id,"status":"Downloading"}
+        message = {"server_request_id":req_id_original,"status":"Downloading"}
         #return Response(jsonify(message), status=200, mimetype='application/json')
         return jsonify(message), 200
         #return "Wait till you get it!"
@@ -134,7 +134,7 @@ def transform_view():
         response_frontend = {}
         response_frontend['status'] = "OK"
         response_frontend['links'] = full_path_array
-        response_frontend['server_request_id'] = req_id
+        response_frontend['server_request_id'] = req_id_original
         
         # Add the server address (MAKE IT AGNOSTIC OF IP ADDRESS)
         return jsonify(response_frontend)
