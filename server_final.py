@@ -126,9 +126,12 @@ def transform_view():
         for i in os.listdir(path):
             files.append(i)        
         full_path_array = ['http://' + IPAddr + ':5000/' + str(req_id) + '/' + s for s in files]
-        print(full_path_array)
+        response_frontend = {}
+        response_frontend['status'] = "OK"
+        response_frontend['links'] = full_path_array
+        
         # Add the server address (MAKE IT AGNOSTIC OF IP ADDRESS)
-        return jsonify(full_path_array)
+        return jsonify(response_frontend)
 
 
 
