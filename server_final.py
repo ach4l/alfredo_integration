@@ -1,4 +1,5 @@
 from flask import Flask, make_response, request, render_template, send_file, abort, jsonify, send_from_directory
+from flask import Response
 import io
 import csv
 import os
@@ -108,8 +109,9 @@ def transform_view():
     print(UPLOAD_DIRECTORY)
     if not os.path.exists(UPLOAD_DIRECTORY):
         # Create response
-        message = {"message":"Wait till you get it!"}
-        return jsonify(message), 100
+        message = {"server_request_id":req_id,"status":"Downloading"}
+        #return Response(jsonify(message), status=200, mimetype='application/json')
+        return jsonify(message), 200
         #return "Wait till you get it!"
     else:        
         files = []
