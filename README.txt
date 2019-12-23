@@ -43,6 +43,11 @@ Sample data remains the same. Only url changes.
 Post JSON to the following URL
 url = <ip.address>:<port>/send_results
 
+ONLY FOR TEST : 
+Wikitravel 0 - {query : "Valparaiso"}
+Wikitravel 1 - {query : "Hyderabad"}
+Youtube 1 - {query : "Gaand"}
+
 Returns a json object (jsonify(files)) 
 
 # Task 3 - Links to download the files

@@ -1,7 +1,7 @@
 import requests
 import json
 
-data = {'user_id': '1','server_request_id' : "yt_1", 'req_id':"1", 'type':'Wikitravel', 'mode': '0', 'query': 'DarjeelingS'}
+data = {'user_id': '1','server_request_id' : "w_1", 'req_id':"1", 'type':'Wikitravel', 'mode': '0', 'query': 'Valparaiso'}
 
 headers = {'content-type': 'application/json'}
 
