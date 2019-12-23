@@ -119,7 +119,9 @@ def wikitravel_scraper(query, request_id, level):
             print(city)
             command = 'wget -q -N -c -k -p -e robots=off -U mozilla -K -E -t 6 -R "*.JPG,*.jpg,*.PNG,*.png,*.jpeg,*.JPEG" --no-check-certificate --span-hosts --convert-links --no-directories --directory-prefix=static/'+ request_id +' https://www.wikitravel.org' + link
             os.system(command)
-        transform_html('static/'+request_id+'/'+url.split('/')[-1] + '.html',links,request_id)   
+        transform_html('static/'+request_id+'/'+url.split('/')[-1] + '.html',links,request_id)
+    else:
+        transform_html('static/'+request_id+'/'+url.split('/')[-1] + '.html',[],request_id)    
     #zip_a_directory(str(request_id)+'.zip','temp_output', 'results')
     #shutil.rmtree('temp_output', ignore_errors=False, onerror=None)
     print('done and saved at results/' + str(request_id) + '.zip')

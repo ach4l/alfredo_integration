@@ -53,3 +53,7 @@ Returns a json object (jsonify(files))
 # Task 3 - Links to download the files
 
 Just iterate through all the links gotten from Task 2.
+
+For wikitravel the link would be
+
+url = <ip.address>:<port>/<reqid>/index.html
