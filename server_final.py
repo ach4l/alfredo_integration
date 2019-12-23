@@ -107,7 +107,10 @@ def transform_view():
     print('looking for your request in the following directory')
     print(UPLOAD_DIRECTORY)
     if not os.path.exists(UPLOAD_DIRECTORY):
-        return "Wait till you get it!"
+        # Create response
+        message = {"message":"Wait till you get it!"}
+        return jsonify(message), 100
+        #return "Wait till you get it!"
     else:        
         files = []
         path = 'static/' + str(req_id) + '/'
