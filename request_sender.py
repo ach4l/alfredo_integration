@@ -5,7 +5,7 @@ data = {'user_id': '1','server_request_id' : "w_1", 'req_id':"1", 'type':'Wikitr
 
 headers = {'content-type': 'application/json'}
 
-url = "http://192.168.43.31:5000/send_results"
+url = "http://192.168.43.31:5000/backup/1"
 
-r = requests.post(url = url, data = json.dumps(data), headers = headers )
+r = requests.get(url = url, data = json.dumps(data), headers = headers )
 print(r.text)

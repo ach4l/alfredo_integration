@@ -141,6 +141,25 @@ def transform_view():
         # Add the server address (MAKE IT AGNOSTIC OF IP ADDRESS)
         return jsonify(response_frontend)
 
+@app.route('/backup/<userid>', methods=["GET","POST"])
+@cross_origin(supports_credentials=True)
+def give_backup(userid):
+    req_data=request.get_json()
+    directory_to_look = 'static/backup/' + userid + '.json'
+    import json
+    if request.method == 'GET':
+        with open(directory_to_look, 'r', encoding='utf-8') as f:
+            json_data = json.load(f)
+        return (jsonify(json_data))
+    if request.method == 'POST':
+        print()
+        with open(directory_to_look, 'w+', encoding='utf-8') as f:
+            json.dump(req_data, f)
+        message = {"status":"OK"}
+        return jsonify(message), 200
+    
+    
+
 
 
 
