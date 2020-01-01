@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+   
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a style="font-size:10vw" class="navbar-brand" href="#"><b> <font color="#E5E4E2">   Inter - Post      </font>          </b> </a>
+
+                    
+
+
+            </div>
+        </div>
+    </nav>
+    <style>
+      body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 1em 0;
+  }
+  
+  .grid {
+    /* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3vw;
+    
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45vw, 1fr));
+    grid-auto-rows: minmax(50vw, auto);
+    /*grid-gap: 1em;*/
+  }
+  
+  .module {
+    /* Demo-Specific Styles */
+    background: #161515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vw;
+    width: 45vw;
+    
+    /* Flex Fallback */
+    margin-left: 3vw;
+    margin-right: 3vw;
+    flex: 1 1 200px;
+  }
+  
+  /* If Grid is supported, remove the margin we set for the fallback */
+  @supports (display: grid) {
+    .module {
+      margin: 0;
+    }
+  }
+      </style>
+    <body style="background-color:#E5E4E2;">
+<div class="grid">
+
+    <a href="/youtube"><div style="font-size:8vw" tabindex="1" class="module" autofocus><b><font color="red">Youtube</font></b></div></a>
+    <a href="/google"><div style="font-size:8vw" tabindex="2" class="module"><b><font color="white">Google</font></b></div></a>
+    <a href="/wikitravel"><div style="font-size:8vw" tabindex="3" class="module"><b><font color="grey">Wikitravel</font></b></div></a>
+    <a href="/weather"><div style="font-size:8vw" tabindex="4" class="module"><b><font color="#3C5CFE">Weather</font></b></div></a>
+
+</div>
+
+
+<script>
+    youtubeElement =  document.querySelector('.module')
+    youtubeElement.focus()
+    var lastActiveElement = document.activeElement;
+    console.log(youtubeElement);
+    var currentActiveElement = document.activeElement;
+    console.log(lastActiveElement);
+    youtubeElement.addEventListener('keydown', handleKeydown);
+    function handleKeydown(e) {
+  switch(e.key) {
+    case 'ArrowUp':
+      nav(-1);
+      break;
+    case 'ArrowDown':
+      nav(1);
+      break;
+    case 'ArrowRight':
+      nav(1);
+      break;
+    case 'ArrowLeft':
+      nav(-1);
+      break;
+  }
+}
+function nav (move) {
+  const currentIndex = document.activeElement.tabIndex;
+  const next = currentIndex + move;
+  const items = document.querySelectorAll('.module');
+  const targetElement = items[next-1];
+  targetElement.focus();
+  targetElement.addEventListener('keydown', handleKeydown);
+}
+</script>
+
+</body>
+
+
+</html>
