@@ -1,0 +1,15 @@
+gdp_df['b'] = gdp_df['b'].str.replace(r'\[.*?\]','')
+
+16xj1a0317
+17xj1a0557
+17xj1a0345
+17xj1a0520
+17xj1a0543
+
+feedbacker 1 9 4 7 3
+stacle 3 6 4 6 2
+-- game 4 9 
+mobidew 6 6 7 7 7
+Farmers Marketplace 5 7 5 3 6
+Fundit noooooo wayyyy
+ 

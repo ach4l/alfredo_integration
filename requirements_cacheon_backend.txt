@@ -1,4 +1,6 @@
 pytube==9.5.3
+google
+requests
 beautifulsoup4
 Flask
 flask-cors
